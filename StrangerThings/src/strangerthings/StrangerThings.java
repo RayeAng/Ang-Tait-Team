@@ -55,7 +55,7 @@ public class StrangerThings {
         characterOne.setAbilities("Mike runs fast.");
         
         String characterInfo = newPlayer.toString();
-        System.out.println("\n" + characterInfo + "\n");
+        System.out.println("\n" + characterOne + "\n");
     }
     
 }
