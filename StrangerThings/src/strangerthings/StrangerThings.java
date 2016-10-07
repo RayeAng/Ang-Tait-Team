@@ -8,6 +8,7 @@ package strangerthings;
 import CITstrangerthings.model.Game;
 import CITstrangerthings.model.Player;
 import CITstrangerthings.model.Weapons;
+import CITstrangerthings.model.Character;
 
 /**
  *
@@ -45,6 +46,16 @@ public class StrangerThings {
         
         String playerInfo = newPlayer.toString();
         System.out.println("\n" + playerInfo + "\n");
+        
+        //Character Class section
+        Character characterOne = new Character();
+        
+        characterOne.setCharacterName("Mike");
+        characterOne.setDescription("Mike is a boy.");
+        characterOne.setAbilities("Mike runs fast.");
+        
+        String characterInfo = newPlayer.toString();
+        System.out.println("\n" + characterInfo + "\n");
     }
     
 }
