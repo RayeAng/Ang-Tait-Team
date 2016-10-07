@@ -6,6 +6,7 @@
 package strangerthings;
 
 import CITstrangerthings.model.Game;
+import CITstrangerthings.model.Player;
 import CITstrangerthings.model.Weapons;
 
 /**
@@ -18,6 +19,7 @@ public class StrangerThings {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        //Game Class section
         Game gameOne = new Game();
         
         gameOne.setNoPlayers(11);
@@ -34,9 +36,15 @@ public class StrangerThings {
         
         String weaponInfo = weapon1.toString();
         System.out.println("\n" + weaponInfo + "\n");
+        
+        //Player Class section
+        Player newPlayer = new Player();
+        
+        newPlayer.setName("Archie Tait");
+        newPlayer.setPlayerFear("Fish");
+        
+        String playerInfo = newPlayer.toString();
+        System.out.println("\n" + playerInfo + "\n");
     }
     
-    
 }
-// I am making changes! Bwahahaha!
-// There is no stopping me!
