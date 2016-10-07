@@ -6,6 +6,7 @@
 package strangerthings;
 
 import CITstrangerthings.model.Game;
+import CITstrangerthings.model.Weapons;
 
 /**
  *
@@ -24,7 +25,17 @@ public class StrangerThings {
         
         String gameInfo = gameOne.toString();
         System.out.println("\n" + gameInfo + "\n");
+        
+        //Weapons Class section
+        Weapons weapon1 = new Weapons();
+        
+        weapon1.setName("Baseball Bat");
+        weapon1.setItemNumber(1);
+        
+        String weaponInfo = weapon1.toString();
+        System.out.println("\n" + weaponInfo + "\n");
     }
+    
     
 }
 // I am making changes! Bwahahaha!
