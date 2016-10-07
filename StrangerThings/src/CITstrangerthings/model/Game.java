@@ -15,6 +15,11 @@ public class Game implements Serializable{
     private double noPlayers;
     private double totalTime;
 
+    public Game() {
+    }
+    
+    
+
     public double getNoPlayers() {
         return noPlayers;
     }
@@ -29,6 +34,42 @@ public class Game implements Serializable{
 
     public void setTotalTime(double totalTime) {
         this.totalTime = totalTime;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.noPlayers) ^ (Double.doubleToLongBits(this.noPlayers) >>> 32));
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.totalTime) ^ (Double.doubleToLongBits(this.totalTime) >>> 32));
+        return hash;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" + "noPlayers=" + noPlayers + ", totalTime=" + totalTime + '}';
+    }
+    
+    
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Game other = (Game) obj;
+        if (Double.doubleToLongBits(this.noPlayers) != Double.doubleToLongBits(other.noPlayers)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.totalTime) != Double.doubleToLongBits(other.totalTime)) {
+            return false;
+        }
+        return true;
     }
     
     
