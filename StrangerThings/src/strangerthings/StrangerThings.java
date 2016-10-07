@@ -5,9 +5,11 @@
  */
 package strangerthings;
 
+import CITstrangerthings.model.Game;
+
 /**
  *
- * @author tibbit13
+ * @author Tibbit13 & RayeAng
  */
 public class StrangerThings {
 
@@ -15,7 +17,13 @@ public class StrangerThings {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Game gameOne = new Game();
+        
+        gameOne.setNoPlayers(11);
+        gameOne.setTotalTime(100.00);
+        
+        String gameInfo = gameOne.toString();
+        System.out.println("\n" + gameInfo + "\n");
     }
     
 }
