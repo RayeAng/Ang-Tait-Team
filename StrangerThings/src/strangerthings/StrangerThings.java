@@ -9,7 +9,10 @@ import CITstrangerthings.model.Game;
 import CITstrangerthings.model.Player;
 import CITstrangerthings.model.Weapons;
 import CITstrangerthings.model.Character;
-
+import CITstrangerthings.model.Items;
+import CITstrangerthings.model.Scene;
+import CITstrangerthings.model.Monster;
+import CITstrangerthings.model.ResourceTypeScene;
 /**
  *
  * @author Tibbit13 & RayeAng
@@ -54,8 +57,47 @@ public class StrangerThings {
         characterOne.setDescription("Mike is a boy.");
         characterOne.setAbilities("Mike runs fast.");
         
-        String characterInfo = newPlayer.toString();
+        String characterInfo = characterOne.toString();
         System.out.println("\n" + characterOne + "\n");
+        
+        //Item Class section
+        Items itemOne = new Items();
+        
+        itemOne.setItemType("Shards of Glass");
+        itemOne.setItemAmount(4);
+        itemOne.setRequiredAmount(10);
+        
+        String itemInfo = itemOne.toString();
+        System.out.println("\n" + itemInfo + "\n");
+        
+        //Scene Class section
+        Scene sceneOne = new Scene();
+        
+        sceneOne.setSceneName("Mirkwood");
+        sceneOne.setDescription("The dark woods where your friend went missing...");
+        sceneOne.setItemPresent("Nails");
+        sceneOne.setMonsterPresent("There is monster.");
+        
+        String sceneInfo = sceneOne.toString();
+        System.out.println("\n" + sceneOne + "\n");
+        
+        //Monster Class section
+        Monster monsterOne = new Monster();
+        
+        monsterOne.setName("Gorgan-Spawn");
+        monsterOne.setStrength(25);
+        monsterOne.setDescription("A foul, crocodile-toothed fiend whose body contorts into a ball of spikes.  It rolls toward you, gaining momentum!");
+        
+        String monsterInfo = monsterOne.toString();
+        System.out.println("\n" + monsterOne + "\n");
+        
+        //ResourceTypeLocation Class section
+        ResourceTypeScene rType1 = new ResourceTypeScene();
+        
+        rType1.setItemType("Barbed Wire");
+        rType1.setAmountAvailable(2);
+        
+        System.out.println("\n" + rType1 + "\n");
     }
     
 }
