@@ -10,6 +10,8 @@ import CITstrangerthings.model.Player;
 import CITstrangerthings.model.Weapons;
 import CITstrangerthings.model.Character;
 import CITstrangerthings.model.Items;
+import CITstrangerthings.model.Location;
+import CITstrangerthings.model.Map;
 import CITstrangerthings.model.Scene;
 import CITstrangerthings.model.Monster;
 import CITstrangerthings.model.ResourceTypeScene;
@@ -98,6 +100,23 @@ public class StrangerThings {
         rType1.setAmountAvailable(2);
         
         System.out.println("\n" + rType1 + "\n");
+        
+        //Map Class section
+        Map newMap = new Map();
+        
+        newMap.setRowCount(5);
+        newMap.setColumnCount(5);
+        
+        System.out.println("\n" + newMap + "\n");
+        
+        //Location Class section
+        Location NewLocation = new Location();
+        
+        NewLocation.setRow(1);
+        NewLocation.setColumn(1);
+        NewLocation.setVisit("No");
+        
+        System.out.println("\n" + NewLocation + "\n");
     }
     
 }
