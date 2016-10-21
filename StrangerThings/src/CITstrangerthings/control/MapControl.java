@@ -23,7 +23,7 @@ public class MapControl {
          if (y < 1 || y > 100) {
                     	return -1;
                              }
-         int compAns = (int)(( ( (x/2) + y)/3)*2);
+         int compAns = (int)(( ( ((double)x/2) + (double)y)/3)*2);
  
          if (userAnswer != compAns) {
         	return 0;
