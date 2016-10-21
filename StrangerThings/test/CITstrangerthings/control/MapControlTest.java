@@ -22,7 +22,7 @@ public class MapControlTest {
      */
     @Test
     public void testMarbleCount() {
-        System.out.println("marbleCount\n test 1"); 
+        System.out.println("marbleCount\n \btest 1"); 
         int userAnswer = 127;
         int x = 254;
         int y = 64;
