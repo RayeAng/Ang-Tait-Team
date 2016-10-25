@@ -15,6 +15,7 @@ import CITstrangerthings.model.Map;
 import CITstrangerthings.model.Scene;
 import CITstrangerthings.model.Monster;
 import CITstrangerthings.model.ResourceTypeScene;
+import CITstrangerthings.view.StartProgramView;
 /**
  *
  * @author Tibbit13 & RayeAng
@@ -25,7 +26,9 @@ public class StrangerThings {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+      
+       StartProgramView startProgramView = new StartProgramView();
+       startProgramView.displayStartProgramView();
     }
     
 }

@@ -45,4 +45,26 @@ public class StartProgramView {
         );
     }
 
+    public void displayStartProgramView() {
+        boolean done = false;
+        do {
+            String playersName = this.getPlayersName();
+            if (playersName.toUpperCase().equals("Q"))
+            return; 
+        
+        done = this.doAction(playersName);
+    }
+
+
+        while (!done);  
+    }
+
+    private String getPlayersName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private boolean doAction(String playersName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
