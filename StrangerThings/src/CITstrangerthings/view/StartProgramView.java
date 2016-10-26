@@ -6,6 +6,10 @@
 package CITstrangerthings.view;
 
 ///++
+import CITstrangerthings.control.GameControl;
+import CITstrangerthings.model.Player;
+import java.util.Scanner;
+
 // +
 // + @author Raye Ang
 // +/
@@ -49,22 +53,49 @@ public class StartProgramView {
         boolean done = false;
         do {
             String playersName = this.getPlayersName();
-            if (playersName.toUpperCase().equals("Q"))
-            return; 
-        
-        done = this.doAction(playersName);
-    }
+            if (playersName.toUpperCase().equals("Q")) {
+                return;
+            }
 
-
-        while (!done);  
+            done = this.doAction(playersName);
+        } while (!done);
     }
 
     private String getPlayersName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Scanner keyboard = new Scanner(System.in);
+        String value = "";
+        boolean valid = false;
+
+        while (!valid) {
+            System.out.println("\n" + this.promptMessage);
+
+            value = keyboard.nextLine();
+            value = value.trim();
+
+            if (value.length() < 1) {
+                System.out.println("\nInvalid valude: value can not be blank");
+                continue;
+            }
+            break;
+        }
+        return value;
     }
 
     private boolean doAction(String playersName) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
+        if (playersName.length() < 2) {
+            System.out.println("\nInvalid players name: "
+                    + "The name must be greater than one character"
+                    + "in length");
+            return false;
+        }
+        Player player = GameControl.createPlayer(playersName);
+
+        if (player == null) {
+            System.out.println("\nError creating the player.");
+            return false;
+        }
+        
+           return true;
+    }
 }
