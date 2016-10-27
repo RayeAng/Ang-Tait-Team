@@ -9,6 +9,7 @@ package CITstrangerthings.view;
 import CITstrangerthings.control.GameControl;
 import CITstrangerthings.model.Player;
 import java.util.Scanner;
+import strangerthings.StrangerThings;
 
 // +
 // + @author Raye Ang
@@ -95,7 +96,17 @@ public class StartProgramView {
             System.out.println("\nError creating the player.");
             return false;
         }
-        
-           return true;
+        this.displayNextView();
+        return true;
+    }
+
+    private void displayNextView() {
+        System.out.println("\n ++++++++++++++++++++++++++++++++++"
+                + "\n Welcome to the game, " + StrangerThings.getPlayer().getName() +"!"
+                + "\n It's time to get down to cracking this case and solve the mystery!"
+                + "\n ++++++++++++++++++++++++++++++++++"
+        );
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.displayMainMenuView();
     }
 }
