@@ -5,10 +5,24 @@
  */
 package CITstrangerthings.control;
 
+import CITstrangerthings.model.Player;
+import strangerthings.StrangerThings;
+
 /**
  *
  * @author tibbit13
  */
 public class GameControl {
+
+    public static Player createPlayer(String name) {
+        if (name == null) {
+            return null;
+        }
+        Player player = new Player();
+        player.setName(name);
+        
+        StrangerThings.setPlayer(player);
+        return player;
+    }
     
 }
