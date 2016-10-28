@@ -114,7 +114,8 @@ public MainMenuView(){
     }
 
     private void displayHelpMenu() {
-        System.out.println("*** help me successful ***");
+        HelpView helpView = new HelpView();
+        helpView.displayHelpView();
     }
     
 }
