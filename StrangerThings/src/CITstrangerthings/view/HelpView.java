@@ -93,23 +93,77 @@ public HelpView(){
     }
 
     private void showGoal() {
-        System.out.println("\n*** Show goal success");
+        System.out.println("\n*********************************"
+                + "\n*  The three main characters are   *"
+                + "\n*  Mike, Dustin, and Lucas are     *"
+                + "\n*  out on an Adventure because     *"
+                + "\n*  they lost \"Eleven\". They      *"
+                + "\n*  are out in the woods with the   *"
+                + "\n*  monster, other creatures, and   *"
+                + "\n*  other obstacles such as         *"
+                + "\n*  government officials and the    *"
+                + "\n*  Sheriff. You will explore the   *"
+                + "\n*  map seeking required items in   *"
+                + "\n*  order to destroy the monster    *"
+                + "\n*  while avoiding the Sheriff and  *"
+                + "\n*  the government. Using simple    *"
+                + "\n*  commands you will move your     *"
+                + "\n*  characters in order to complete *"
+                + "\n*  the tasks that are needed to    *"
+                + "\n*  complete the game. Take one     *"
+                + "\n*  wrong turn the game is OVER!    *"
+                + "\n**********************************");
     }
 
     private void showBackStory() {
-        System.out.println("\n*** Show backstory success");
+        System.out.println("\n**********************************"
+                + "\n*  Stranger things is an American  *"
+                + "\n*  science fiction-horror web      *"
+                + "\n*  television series created by    *"
+                + "\n*  the Duffer Brothers. The plot   *"
+                + "\n*  follows the disappearance of a  *"
+                + "\n*  young boy, and a telekinetic    *"
+                + "\n*  girl who helps his friends in   *"
+                + "\n*  their search, while the boy's   *"
+                + "\n*  older brother, his mother, and  *"
+                + "\n*  the town police chief start     *"
+                + "\n*  their own investigations.       *"
+                + "\n**********************************");
     }
 
     private void movement() {
-        System.out.println("\n*** Show movement success");
+        System.out.println("\n**********************************"
+                + "\n*  Characters will all be moving   *"
+                + "\n*  together one space at a time.   *"
+                + "\n*  The arrow keys on the keyboard  *"
+                + "\n*  will be used to move the team   *"
+                + "\n*  or characters.                  *"
+                + "\n**********************************");
     }
 
     private void showInventory() {
-        System.out.println("\n*** Show inventory success");
+        System.out.println("\n**********************************"
+                + "\n*  The list of inventory on the    *"
+                + "\n*  map shows you what items you    *"
+                + "\n*  have on the map to make weapons *"
+                + "\n*  but doesn’t show you the        *"
+                + "\n*  location of these items on the  *"
+                + "\n*  map.                            *"
+                + "\n**********************************");
     }
 
     private void upgradeWeaponHelp() {
-        System.out.println("\n*** Show upgrade weapon success");
+        System.out.println("n**********************************"
+                + "\n*  Throughout the game, objects for"
+                + "\n*  making weapons will be at      *"
+                + "\n*  randomized places on the map.  *"
+                + "\n*  You are to gather as many      *"
+                + "\n*  objects as possible without    *"
+                + "\n*  getting caught by government   *"
+                + "\n*  and monster. The more objects  *"
+                + "\n*  you have, the more powerful    *"
+                + "\n*  your weapon becomes.           *"
+                + "\n**********************************");
     }
 }
 
