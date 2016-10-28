@@ -13,6 +13,11 @@ import strangerthings.StrangerThings;
  * @author tibbit13
  */ 
 public class GameControl {
+    
+    public static void createNewGame(Player player){
+        System.out.println("\n*** create new game success ***");
+        
+    }
 
     public static Player createPlayer(String name) {
         if (name == null) {
