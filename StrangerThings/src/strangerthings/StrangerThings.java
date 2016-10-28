@@ -16,19 +16,35 @@ import CITstrangerthings.model.Scene;
 import CITstrangerthings.model.Monster;
 import CITstrangerthings.model.ResourceTypeScene;
 import CITstrangerthings.view.StartProgramView;
+
 /**
  *
  * @author Tibbit13 & RayeAng
  */
 public class StrangerThings {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-      
-       StartProgramView startProgramView = new StartProgramView();
-       startProgramView.displayStartProgramView();
+    private static Game currentGame = null;
+    private static Player player = null;
+
+    public static Game getCurrentGame() {
+        return currentGame;
     }
-    
+
+    public static void setCurrentGame(Game currentGame) {
+        StrangerThings.currentGame = currentGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        StrangerThings.player = player;
+    }
+
+    public static void main(String[] args) {
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
+    }
+
 }
