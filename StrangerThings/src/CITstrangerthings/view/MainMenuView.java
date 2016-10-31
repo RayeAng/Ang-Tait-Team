@@ -57,7 +57,7 @@ public MainMenuView(){
             value = value.trim();
 
             if (value.length() < 1) {
-                System.out.println("\nInvalid valude: value can not be blank");
+                System.out.println("\nInvalid answer: You must have a name.");
                 continue;
             }
             break;
@@ -86,7 +86,7 @@ public MainMenuView(){
                 this.displayHelpMenu();
                 break;
             default: 
-                System.out.println("\n*** Invalid Selection, try again. ***");
+                System.out.println("\n*** Invalid selection, try using an available selection. ***");
                 break;
                    
         }
