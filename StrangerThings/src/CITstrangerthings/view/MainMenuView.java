@@ -85,6 +85,10 @@ public MainMenuView(){
             case "H":
                 this.displayHelpMenu();
                 break;
+            case "M":
+                System.out.println("\n*** Temporary function. ***");
+                this.MapView();
+                break;
             default: 
                 System.out.println("\n*** Invalid selection, try using an available selection. ***");
                 break;
@@ -117,5 +121,9 @@ public MainMenuView(){
         HelpView helpView = new HelpView();
         helpView.displayHelpView();
     }
-    
+
+    private void MapView() {
+        MapView mapView = new MapView();
+        mapView.displayMapView();
+    }
 }
