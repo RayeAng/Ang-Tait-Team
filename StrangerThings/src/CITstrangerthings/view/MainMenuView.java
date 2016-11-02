@@ -123,7 +123,7 @@ public MainMenuView(){
     }
 
     private void MapView() {
-        MapView mapView = new MapView();
-        mapView.displayMapView();
+        MoveView moveView = new MoveView();
+        moveView.displayMoveView();
     }
 }

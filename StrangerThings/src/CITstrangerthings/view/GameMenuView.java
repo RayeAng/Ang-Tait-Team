@@ -102,7 +102,9 @@ public class GameMenuView {
     }
 
     private void showMove() {
-        System.out.println("\n***show move working   ***");
+        MoveView moveView = new MoveView();
+        moveView.displayMoveView();
+
     }
 
     private void showInventory() {

@@ -11,40 +11,39 @@ import java.util.Scanner;
  *
  * @author Raye Ang
  */
-public class MapView {
-    private String mapOption;
-    
-    public void displayMapView() {
+public class MoveView {
+
+    private String moveOption;
+
+    public void displayMoveView() {
         boolean done = false;
-        do{
-            String mapOption = this.getMapOption();
-        
-        if (mapOption.toUpperCase().equals("Q"))
-            return;
-        done = this.doAction(mapOption);
+        do {
+            String moveOption = this.getMoveOption();
+
+            if (moveOption.toUpperCase().equals("Q")) {
+                return;
+            }
+            done = this.doAction(moveOption);
         } while (!done);
     }
-    
-    
-    public MapView(){
-        this.mapOption = "\n++++++++++++++++++++++++++++++++"
-            + "\n++++++++ I am the map ++++++++++"
-            + "\n++++++++++++++++++++++++++++++++"
-            + "\n"
-            + "\nN - Move North"
-            + "\nS - Move South"
-            + "\nW - Move West"
-            + "\nE - Move East";
+
+    public MoveView() {
+        this.moveOption
+                = "\n"
+                + "\nN - Move North"
+                + "\nS - Move South"
+                + "\nW - Move West"
+                + "\nE - Move East";
     }
 
-    private String getMapOption() {
-       
+    private String getMoveOption() {
+
         Scanner keyboard = new Scanner(System.in);
         String value = "";
         boolean valid = false;
 
         while (!valid) {
-            System.out.println("\n" + this.mapOption);
+            System.out.println("\n" + this.moveOption);
 
             value = keyboard.nextLine();
             value = value.trim();
@@ -59,10 +58,10 @@ public class MapView {
 
     }
 
-    private boolean doAction(String mapOption) {
-        mapOption = mapOption.toUpperCase();
-        
-        switch (mapOption){
+    private boolean doAction(String moveOption) {
+        moveOption = moveOption.toUpperCase();
+
+        switch (moveOption) {
             case "N":
                 this.moveNorth();
                 break;
