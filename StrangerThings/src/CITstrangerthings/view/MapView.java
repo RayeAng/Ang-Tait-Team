@@ -69,6 +69,12 @@ public class MapView {
             case "S":
                 this.moveSouth();
                 break;
+            case "W":
+                this.moveWest();
+                break;
+            case "E":
+                this.moveEast();
+                break;
         }
         return false;
     }
@@ -79,5 +85,13 @@ public class MapView {
 
     private void moveSouth() {
         System.out.println("\nPlayer has moved south!");
+    }
+
+    private void moveWest() {
+        System.out.println("\nPlayer has moved west!");
+    }
+
+    private void moveEast() {
+        System.out.println("\nPlayer has moved east!");
     }
 }
