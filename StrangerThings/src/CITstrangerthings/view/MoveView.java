@@ -33,7 +33,8 @@ public class MoveView {
                 + "\nN - Move North"
                 + "\nS - Move South"
                 + "\nW - Move West"
-                + "\nE - Move East";
+                + "\nE - Move East"
+                + "\nQ - Exit move menu";
     }
 
     private String getMoveOption() {
