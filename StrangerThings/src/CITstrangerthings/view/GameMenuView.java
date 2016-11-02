@@ -40,7 +40,7 @@ public class GameMenuView {
                 + "\nS - Save Game"
                 + "\nH - Help"
                 + "\nW - Weapon Manufacture/Status"
-                + "\nL - Look for Items"
+                + "\nP - Player Options"
                 + "\nQ - Exit Game Menu"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
     }
@@ -89,8 +89,8 @@ public class GameMenuView {
             case "W":
                 this.showWeapon();
                 break;
-            case "L":
-                this.lookForItems();
+            case "P":
+                this.playerOptions();
                 break;
 
             default:
@@ -128,8 +128,10 @@ public class GameMenuView {
         System.out.println("\n*** show weapon working  ***");
     }
 
-    private void lookForItems() {
-        System.out.println("\n***  looking for items, ahoy!   ***");
+
+    private void playerOptions() {
+        PlayerOptionView optionView = new PlayerOptionView();
+        optionView.displayPlayerOption();
     }
 
 }
