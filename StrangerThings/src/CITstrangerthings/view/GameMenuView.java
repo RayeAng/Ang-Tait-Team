@@ -41,7 +41,7 @@ public class GameMenuView {
                 + "\nH - Help"
                 + "\nW - Weapon Manufacture/Status"
                 + "\nL - Look for Items"
-                + "\nQ - Exit Help Menu"
+                + "\nQ - Exit Game Menu"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
     }
 
