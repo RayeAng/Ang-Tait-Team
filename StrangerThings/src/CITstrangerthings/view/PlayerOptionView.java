@@ -78,13 +78,15 @@ public void displayPlayerOption() {
         }
         return false;
     }
-//Above this comment is Archie's stuff=====================================================================
 
     private void attackMonster() {
+        //User unput stuff
         PlayerControl attackStat = new PlayerControl();
-//        int userInput = 5;
+        Scanner userInput = new Scanner(System.in);
+        short userAnswer = userInput.nextShort();
+        
 //        int itemStrength = 2;
-        attackStat.playerAttack(5, 2);
+        attackStat.playerAttack(userAnswer, 2);
     }
 
     private void fleeMonster() {
