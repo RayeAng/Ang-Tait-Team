@@ -89,7 +89,7 @@ public void displayPlayerOption() {
 
     private void fleeMonster() {
         PlayerControl fleeMonster = new PlayerControl();
-        fleeMonster.playerFlee(6, 7, 3, 4, 5);
+        fleeMonster.playerFlee(5, 4, 3, 0.33, 0.33);
     }
 
    
