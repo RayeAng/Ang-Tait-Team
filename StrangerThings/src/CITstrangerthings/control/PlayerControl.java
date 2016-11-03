@@ -11,7 +11,7 @@ package CITstrangerthings.control;
  */
 public class PlayerControl {
 
-    public int playerFlee(double fVel, double initVel, double time, double acc, double ans) {
+    public static int playerFlee(double fVel, double initVel, double time, double acc, double ans) {
         if (fVel < 1.0 || initVel < 1.0 || time < 1.0) {
             return -1;
         }

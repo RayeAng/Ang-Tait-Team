@@ -86,8 +86,9 @@ public void displayPlayerOption() {
     }
 
     private void fleeMonster() {
-        PlayerControl fleeMonster = new PlayerControl();
-        fleeMonster.playerFlee(5, 4, 3, 0.33, 0.33);
+      PlayerFleeView playerFlee = new PlayerFleeView();
+      playerFlee.displayFlee();
+        
     }
 
    
