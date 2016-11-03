@@ -31,7 +31,7 @@ public class PlayerControl {
         }
     }
 
-    public double playerAttack (int userSwing, int weaponStrength) {
+    public static double playerAttack (int userSwing, int weaponStrength) {
         if (userSwing < 1 || userSwing > 75) {
             return -1;
          }

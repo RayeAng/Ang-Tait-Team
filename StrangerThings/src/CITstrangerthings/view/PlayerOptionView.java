@@ -80,13 +80,9 @@ public void displayPlayerOption() {
     }
 
     private void attackMonster() {
-        //User unput stuff
-        PlayerControl attackStat = new PlayerControl();
-        Scanner userInput = new Scanner(System.in);
-        short userAnswer = userInput.nextShort();
-        
-//        int itemStrength = 2;
-        attackStat.playerAttack(userAnswer, 2);
+       PlayerAttackView playerChoice = new PlayerAttackView();
+        playerChoice.displayAttack();
+       
     }
 
     private void fleeMonster() {
