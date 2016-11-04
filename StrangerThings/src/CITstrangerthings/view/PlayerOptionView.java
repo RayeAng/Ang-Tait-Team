@@ -19,7 +19,7 @@ public void displayPlayerOption() {
         boolean done = false;
         do {
             String gameOption = this.getGameOption();
-            if (gameOption.toUpperCase().equals("Q")) {
+            if (gameOption.toUpperCase().equals("MASTERQ")) {
                 return;
             }
 
