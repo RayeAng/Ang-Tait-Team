@@ -13,26 +13,10 @@ import strangerthings.StrangerThings;
  *
  * @author Raye Ang
  */
-public class MainMenuView {
-    private String menu;
-    
-    public void displayMainMenuView() {
-        
-        boolean done = false;
-        do{ 
-            
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return;
-            
-            done = this.doAction(menuOption);
-            
-        } while (!done);
-    }
-    
-    
-public MainMenuView(){
-    this.menu = "\n"
+public class MainMenuView extends View{
+   
+    public MainMenuView(){
+                super("\n"
             + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
             + "\n| Main Menu"
             + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
@@ -41,35 +25,17 @@ public MainMenuView(){
             + "\nS - Save Current Game"
             + "\nQ - Quit Game"
             + "\nH - Help Menu"
-            + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+            + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     }
+@Override
+public boolean doAction (String value){
 
-    private String getMenuOption() {
-       
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
-
-        while (!valid) {
-            System.out.println("\n" + this.menu);
-
-            value = keyboard.nextLine();
-            value = value.trim();
-
-            if (value.length() < 1) {
-                System.out.println("\nInvalid answer: You must have a name.");
-                continue;
-            }
-            break;
-        }
-        return value;
-
-    }
-
-    private boolean doAction(String menuOption) {
-        menuOption = menuOption.toUpperCase();
+    value = value.toUpperCase();{
+}
+//    boolean doAction(String menuOption) {
+//        menuOption = menuOption.toUpperCase();
         
-        switch (menuOption){
+        switch (value){
             case "N":
                 this.startNewGame();
                 break;
