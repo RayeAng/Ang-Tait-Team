@@ -11,26 +11,10 @@ import java.util.Scanner;
  *
  * @author tibbit13
  */
-public class HelpView {
-    private String help;
-    
-    public void displayHelpView() {
-        
-        boolean done = false;
-        do{ 
-            
-            String helpOption = this.getHelpOption();
-            if (helpOption.toUpperCase().equals("Q"))
-                return;
-            
-            done = this.doAction(helpOption);
-            
-        } while (!done);
-    }
-    
-    
-public HelpView(){
-    this.help = "\n"
+public class HelpView extends View {
+   
+    public HelpView(){
+    super ( "\n"
             + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
             + "\n| Help Menu"
             + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
@@ -40,32 +24,12 @@ public HelpView(){
             + "\nL - List of Inventory"
             + "\nB - How to Upgrade Weapons"
             + "\nQ - Exit Help Menu"
-            + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+            + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     }
 
-    private String getHelpOption() {
-       
-        Scanner keyboard = new Scanner(System.in);
-        String value = "";
-        boolean valid = false;
 
-        while (!valid) {
-            System.out.println("\n" + this.help);
-
-            value = keyboard.nextLine();
-            value = value.trim();
-
-            if (value.length() < 1) {
-                System.out.println("\nInvalid valude: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-
-    }
-
-    private boolean doAction(String helpOption) {
+    @Override
+    public boolean doAction(String helpOption) {
         helpOption = helpOption.toUpperCase();
         
         switch (helpOption){

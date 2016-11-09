@@ -11,26 +11,10 @@ import java.util.Scanner;
  *
  * @author tibbit13
  */
-public class GameMenuView {
+public class GameMenuView extends View{
 
-    private String game;
-
-    public void displayMenu() {
-
-        boolean done = false;
-        do {
-            String gameOption = this.getGameOption();
-            if (gameOption.toUpperCase().equals("Q")) {
-                return;
-            }
-
-            done = this.doAction(gameOption);
-
-        } while (!done);
-    }
-
-    public GameMenuView() {
-        this.game = "\n"
+   public GameMenuView(){
+   super(  "\n"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
                 + "\n| Game Menu"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
@@ -42,32 +26,12 @@ public class GameMenuView {
                 + "\nW - Weapon Manufacture/Status"
                 + "\nP - Player Options"
                 + "\nQ - Exit Game Menu"
-                + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^";
+                + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     }
 
-    private String getGameOption() {
-        Scanner keyboard = new Scanner(System.in);
-
-        String value = "";
-        boolean valid = false;
-
-        while (!valid) {
-            System.out.println("\n" + this.game);
-
-            value = keyboard.nextLine();
-            value = value.trim();
-
-            if (value.length() < 1) {
-                System.out.println("\nInvalid valude: value can not be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-
-    }
-
-    private boolean doAction(String gameOption) {
+   
+    @Override
+    public boolean doAction(String gameOption) {
         gameOption = gameOption.toUpperCase();
 
         switch (gameOption) {
@@ -121,7 +85,7 @@ public class GameMenuView {
 
     private void showHelp() {
         HelpView helpView = new HelpView();
-        helpView.displayHelpView();
+        helpView.display();
     }
 
     private void showWeapon() {

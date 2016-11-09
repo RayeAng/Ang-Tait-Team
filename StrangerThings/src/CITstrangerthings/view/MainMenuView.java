@@ -68,7 +68,7 @@ public boolean doAction (String value){
         GameControl.createNewGame(StrangerThings.getPlayer());
         
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
     }
 
     private void loadExistingGame() {
@@ -85,7 +85,7 @@ public boolean doAction (String value){
 
     private void displayHelpMenu() {
         HelpView helpView = new HelpView();
-        helpView.displayHelpView();
+        helpView.display();
     }
 
     private void MapView() {
