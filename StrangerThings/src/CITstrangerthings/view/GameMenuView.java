@@ -67,7 +67,7 @@ public class GameMenuView extends View{
 
     private void showMove() {
         MoveView moveView = new MoveView();
-        moveView.displayMoveView();
+        moveView.display();
 
     }
 

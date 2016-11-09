@@ -90,6 +90,6 @@ public boolean doAction (String value){
 
     private void MapView() {
         MoveView moveView = new MoveView();
-        moveView.displayMoveView();
+        moveView.display();
     }
 }
