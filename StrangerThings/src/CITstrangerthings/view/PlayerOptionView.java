@@ -81,7 +81,7 @@ public void displayPlayerOption() {
 
     private void attackMonster() {
        PlayerAttackView playerChoice = new PlayerAttackView();
-        playerChoice.displayAttack();
+        playerChoice.display();
        
     }
 
