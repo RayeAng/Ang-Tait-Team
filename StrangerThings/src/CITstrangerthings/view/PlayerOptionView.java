@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class PlayerOptionView {
     private String action;
-    public void displayPlayerOption() {
+public void displayPlayerOption() {
 
         boolean done = false;
         do {
