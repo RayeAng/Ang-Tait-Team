@@ -89,7 +89,8 @@ public class GameMenuView extends View{
     }
 
     private void showWeapon() {
-        System.out.println("\n*** show weapon working  ***");
+        ShowWeaponView showWeaponView = new ShowWeaponView();
+        showWeaponView.display();
     }
 
 
