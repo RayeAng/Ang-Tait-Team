@@ -39,6 +39,9 @@ public class MoveView extends View {
             case "E":
                 this.moveEast();
                 break;
+            default:
+                System.out.println("\n*** Invalid Selection, try again. ***");
+                break;
         }
         return false;
     }
