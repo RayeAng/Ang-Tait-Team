@@ -12,7 +12,7 @@ package CITstrangerthings.control;
 public class MapControl {
     
    
-    public int marbleCount(int userAnswer, int x, int y){
+    public static int marbleCount(int userAnswer, int x, int y){
         
          if (userAnswer < 1 || userAnswer > 342) {
                     	return -1;

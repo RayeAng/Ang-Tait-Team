@@ -6,7 +6,6 @@
 package CITstrangerthings.view;
 
 import CITstrangerthings.control.PlayerControl;
-import java.util.Scanner;
 
 /**
  *
@@ -35,10 +34,6 @@ public class PlayerAttackView extends View {
             System.out.println("You hit the monster with " + value + "! He is dead.");
             return true;
             
-        }
-       
-
-    
-        
-}
+        }        
+    }
 }
