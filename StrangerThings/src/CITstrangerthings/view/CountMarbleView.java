@@ -40,9 +40,19 @@ public class CountMarbleView extends View {
         switch (marbleAns) {
             case -1:
                 System.out.println("Error, your input was terrible.");
+                System.out.println("\nAndrew had " + x + " number of "
+                + "\nmarbles. He lost half of them in"
+                + "\na match, gained "+ y +" more in "
+                + "\nhis next match but lost a third"
+                + "\nof his final. ");
                 return false;
             case 0:
                 System.out.println("The door doesn't budge.");
+                System.out.println("\nAndrew had " + x + " number of "
+                + "\nmarbles. He lost half of them in"
+                + "\na match, gained "+ y +" more in "
+                + "\nhis next match but lost a third"
+                + "\nof his final. ");
                 return false;
             default:
                 System.out.println("An audible click was heard! You opened the door.");
