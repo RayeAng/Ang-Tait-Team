@@ -25,6 +25,7 @@ public class GameMenuView extends View{
                 + "\nH - Help"
                 + "\nW - Weapon Manufacture/Status"
                 + "\nP - Player Options"
+                + "\nMarble - Solve the marble riddle"
                 + "\nQ - Exit Game Menu"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     }
@@ -55,6 +56,9 @@ public class GameMenuView extends View{
                 break;
             case "P":
                 this.playerOptions();
+                break;
+            case "MARBLE":
+                this.showMarble();
                 break;
 
             default:
@@ -98,5 +102,9 @@ public class GameMenuView extends View{
         PlayerOptionView optionView = new PlayerOptionView();
         optionView.displayPlayerOption();
     }
+
+    private void showMarble() {
+        CountMarbleView marbleQuestion = new CountMarbleView();
+        marbleQuestion.display();}
 
 }
