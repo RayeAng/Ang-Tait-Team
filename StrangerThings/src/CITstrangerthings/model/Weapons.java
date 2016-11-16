@@ -14,65 +14,33 @@ import java.util.Objects;
  *
  * @author tibbit13
  */
-public class Weapons implements Serializable {
+public enum Weapons implements Serializable {
     
-    private String name;
-    private double itemNumber;
+    BaseballBat("Baseball bat", 12, "A baseball bat belonging to the Baseball team. It is worn out."),
+    Plank("2x4 Wooden Plank", 5, "This is a piece of wood."),
+    TennisRacket("Tennis Racket", 10, "Once owned by Rod Laver!"),
+    CricketPaddle("Cricket Paddle", 12, "It's a long stick."),
+    Broom("Broom", 8, "Stolen from the janitor's closet. I bet you didn't know you had one.");
+    
+    private final String name;
+    private final double strength;
+    private final String description;
 
-    public Weapons() {
+    Weapons(String name, double strength, String description) {
+        this.name = name;
+        this.strength = strength;
+        this.description = description;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getItemNumber() {
-        return itemNumber;
-    }
-
-    public void setItemNumber(double itemNumber) {
-        this.itemNumber = itemNumber;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 89 * hash + Objects.hashCode(this.name);
-        hash = 89 * hash + (int) (Double.doubleToLongBits(this.itemNumber) ^ (Double.doubleToLongBits(this.itemNumber) >>> 32));
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "Weapons{" + "name=" + name + ", itemNumber=" + itemNumber + '}';
-    }
-
-    
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Weapons other = (Weapons) obj;
-        if (Double.doubleToLongBits(this.itemNumber) != Double.doubleToLongBits(other.itemNumber)) {
-            return false;
-        }
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return true;
+    public double getStrength() {
+        return strength;
     }
     
-    
-  
+    public String getDescription() {
+        return description;
+    }
 }

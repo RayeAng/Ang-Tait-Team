@@ -5,6 +5,7 @@
  */
 package CITstrangerthings.model;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -15,6 +16,8 @@ public class Character implements Serializable{
     private String characterName;
     private String description;
     private String abilities;
+    
+    ArrayList <Character> party = new ArrayList<>();
 
     public Character() {
     }
