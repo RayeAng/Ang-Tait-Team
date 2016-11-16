@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class Game implements Serializable{
     private double noPlayers;
     private double totalTime;
-
+    
     public Game() {
     }
     
