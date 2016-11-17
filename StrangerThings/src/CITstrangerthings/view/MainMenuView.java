@@ -64,7 +64,6 @@ public boolean doAction (String value){
     }
 
     private void startNewGame() {
-        
         GameControl.createNewGame(StrangerThings.getPlayer());
         
         GameMenuView gameMenu = new GameMenuView();

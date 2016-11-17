@@ -15,6 +15,9 @@ public class Game implements Serializable{
     private double noPlayers;
     private double totalTime;
     
+    private Player playerplaying;
+    private Items[] inventory;
+    
     public Game() {
     }
     
@@ -34,6 +37,22 @@ public class Game implements Serializable{
 
     public void setTotalTime(double totalTime) {
         this.totalTime = totalTime;
+    }
+    
+    public Player getPlayerplaying() {
+        return playerplaying;
+    }
+
+    public void setPlayerplaying(Player playerplaying) {
+        this.playerplaying = playerplaying;
+    }
+    
+    public Items[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Items[] inventory) {
+        this.inventory = inventory;
     }
 
     @Override
