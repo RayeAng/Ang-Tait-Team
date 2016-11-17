@@ -15,6 +15,16 @@ import java.util.Objects;
 public class Player implements Serializable{
     private String name;
     private String playerFear;
+    
+    private Character[] party; 
+
+    public Character[] getParty() {
+        return party;
+    }
+
+    public void setParty(Character[] party) {
+        this.party = party;
+    }
 
     public Player() {
     }

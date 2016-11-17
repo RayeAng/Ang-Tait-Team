@@ -16,6 +16,16 @@ public class Location implements Serializable {
     private double row;
     private double column;
     private String visit;
+    
+    private Scene setting;
+
+    public Scene getSetting() {
+        return setting;
+    }
+
+    public void setSetting(Scene setting) {
+        this.setting = setting;
+    }
 
     public Location() {
     }

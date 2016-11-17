@@ -18,6 +18,25 @@ public class Scene implements Serializable{
     private String description;
     private String itemPresent;
     private String monsterPresent;
+    
+    private ResourceTypeScene itemPickup;
+
+    public ResourceTypeScene getItemPickup() {
+        return itemPickup;
+    }
+
+    public void setItemPickup(ResourceTypeScene itemPickup) {
+        this.itemPickup = itemPickup;
+    }
+    private Monster demigorgan;
+
+    public Monster getDemigorgan() {
+        return demigorgan;
+    }
+
+    public void setDemigorgan(Monster demigorgan) {
+        this.demigorgan = demigorgan;
+    }
 
     public Scene() {
     }

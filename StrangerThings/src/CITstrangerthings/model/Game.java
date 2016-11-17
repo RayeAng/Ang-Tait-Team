@@ -18,6 +18,27 @@ public class Game implements Serializable{
     private Player playerplaying;
     private Items[] inventory;
     
+    
+    private Map mappy;
+
+    public Map getMappy() {
+        return mappy;
+    }
+
+    public void setMappy(Map mappy) {
+        this.mappy = mappy;
+    }
+    private Weapons chosenWeapon;
+
+    public Weapons getChosenWeapon() {
+        return chosenWeapon;
+    }
+
+    public void setChosenWeapon(Weapons chosenWeapon) {
+        this.chosenWeapon = chosenWeapon;
+    }
+    
+    
     public Game() {
     }
     
