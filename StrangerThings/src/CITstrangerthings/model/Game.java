@@ -15,8 +15,9 @@ public class Game implements Serializable{
     private double noPlayers;
     private double totalTime;
     
-    private Player playerplaying;
+    private Player playerPlaying;
     private Items[] inventory;
+    private Map map;
     
     
     private Map mappy;
@@ -61,11 +62,11 @@ public class Game implements Serializable{
     }
     
     public Player getPlayerplaying() {
-        return playerplaying;
+        return playerPlaying;
     }
 
     public void setPlayerplaying(Player playerplaying) {
-        this.playerplaying = playerplaying;
+        this.playerPlaying = playerplaying;
     }
     
     public Items[] getInventory() {
