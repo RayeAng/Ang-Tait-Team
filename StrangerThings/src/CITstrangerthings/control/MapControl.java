@@ -5,6 +5,8 @@
  */
 package CITstrangerthings.control;
 
+import CITstrangerthings.model.Map;
+
 /**
  *
  * @author tibbit13
@@ -12,6 +14,7 @@ package CITstrangerthings.control;
 public class MapControl {
     
    
+    
     public static int marbleCount(int userAnswer, int x, int y){
         
          if (userAnswer < 1 || userAnswer > 342) {
@@ -33,4 +36,8 @@ public class MapControl {
          }
 
     } 
+
+    static Map createMap() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

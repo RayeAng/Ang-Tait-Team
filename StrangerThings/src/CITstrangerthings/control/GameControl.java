@@ -5,6 +5,8 @@
  */
 package CITstrangerthings.control;
 
+import CITstrangerthings.model.Game;
+import CITstrangerthings.model.Map;
 import CITstrangerthings.model.Player;
 import strangerthings.StrangerThings;
 
@@ -26,7 +28,13 @@ public class GameControl {
     }
 
     public static void createNewGame(Player player) {
-        System.out.println("\n*** create new game success ***");
+        Game game = new Game();
+        StrangerThings.setCurrentGame(game);
+        
+        game.setPlayerplaying(player);
+        
+        Map map = MapControl.createMap();
+        
     }
 
 }
