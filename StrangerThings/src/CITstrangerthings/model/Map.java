@@ -11,8 +11,8 @@ import java.io.Serializable;
  * @author Raye Ang
  */
 public class Map implements Serializable {
-    private double rowCount;
-    private double columnCount;
+    private int rowCount;
+    private int columnCount;
     
     Location[][] locations;
 
@@ -25,14 +25,36 @@ public class Map implements Serializable {
     }
    
 
-    public Map() {
+    public Map(int rows, int columns) {
+       if (rows < 1 || columns <1){
+           System.out.println("rows and columns must be greater than 0!");
+       return;
+    }
+       this.rowCount = rowCount;
+       this.columnCount = columnCount;
+       
+       this.locations = new Location[rowCount][columnCount];
+       
+       for (int row = 0; row < rowCount; row++){
+           for (int column = 0; column < columnCount; column++){
+               
+               Location location = new Location();
+               location.setColumn(column);
+               location.setRow(row);
+               location.setVisit(false);
+               
+               locations[row][column] = location;
+           }
+       }
+       
+       
     }
 
     public double getRowCount() {
         return rowCount;
     }
 
-    public void setRowCount(double rowCount) {
+    public void setRowCount(int rowCount) {
         this.rowCount = rowCount;
     }
 
@@ -40,7 +62,7 @@ public class Map implements Serializable {
         return columnCount;
     }
 
-    public void setColumnCount(double columnCount) {
+    public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
 

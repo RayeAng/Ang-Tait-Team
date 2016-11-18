@@ -6,6 +6,7 @@
 package CITstrangerthings.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -15,7 +16,9 @@ import java.util.Objects;
 public class Location implements Serializable {
     private double row;
     private double column;
-    private String visit;
+    private boolean visit;
+    private Scene scene;
+    private ArrayList<Character> characters;
     
     private Scene setting;
 
@@ -46,11 +49,11 @@ public class Location implements Serializable {
         this.column = column;
     }
 
-    public String getVisit() {
+    public boolean getVisit() {
         return visit;
     }
 
-    public void setVisit(String visit) {
+    public void setVisit(boolean visit) {
         this.visit = visit;
     }
 

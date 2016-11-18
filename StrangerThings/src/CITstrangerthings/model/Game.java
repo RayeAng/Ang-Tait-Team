@@ -6,7 +6,10 @@
 package CITstrangerthings.model;
 
 import java.io.Serializable;
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
+import CITstrangerthings.model.Character;
 /**
  *
  * @author tibbit13
@@ -18,32 +21,11 @@ public class Game implements Serializable{
     private Player playerPlaying;
     private Items[] inventory;
     private Map map;
+    private ArrayList<Character> characters;
     
-    
-    private Map mappy;
 
-    public Map getMappy() {
-        return mappy;
-    }
-
-    public void setMappy(Map mappy) {
-        this.mappy = mappy;
-    }
-    private Weapons chosenWeapon;
-
-    public Weapons getChosenWeapon() {
-        return chosenWeapon;
-    }
-
-    public void setChosenWeapon(Weapons chosenWeapon) {
-        this.chosenWeapon = chosenWeapon;
-    }
-    
-    
     public Game() {
     }
-    
-    
 
     public double getNoPlayers() {
         return noPlayers;
@@ -60,15 +42,15 @@ public class Game implements Serializable{
     public void setTotalTime(double totalTime) {
         this.totalTime = totalTime;
     }
-    
-    public Player getPlayerplaying() {
+
+    public Player getPlayerPlaying() {
         return playerPlaying;
     }
 
-    public void setPlayerplaying(Player playerplaying) {
-        this.playerPlaying = playerplaying;
+    public void setPlayerPlaying(Player playerPlaying) {
+        this.playerPlaying = playerPlaying;
     }
-    
+
     public Items[] getInventory() {
         return inventory;
     }
@@ -77,20 +59,33 @@ public class Game implements Serializable{
         this.inventory = inventory;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.noPlayers) ^ (Double.doubleToLongBits(this.noPlayers) >>> 32));
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.totalTime) ^ (Double.doubleToLongBits(this.totalTime) >>> 32));
-        return hash;
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public ArrayList<Character> getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(ArrayList<Character> characters) {
+        this.characters = characters;
     }
 
     @Override
-    public String toString() {
-        return "Game{" + "noPlayers=" + noPlayers + ", totalTime=" + totalTime + '}';
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + (int) (Double.doubleToLongBits(this.noPlayers) ^ (Double.doubleToLongBits(this.noPlayers) >>> 32));
+        hash = 53 * hash + (int) (Double.doubleToLongBits(this.totalTime) ^ (Double.doubleToLongBits(this.totalTime) >>> 32));
+        hash = 53 * hash + Objects.hashCode(this.playerPlaying);
+        hash = 53 * hash + Arrays.deepHashCode(this.inventory);
+        hash = 53 * hash + Objects.hashCode(this.map);
+        hash = 53 * hash + Objects.hashCode(this.characters);
+        return hash;
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -110,8 +105,28 @@ public class Game implements Serializable{
         if (Double.doubleToLongBits(this.totalTime) != Double.doubleToLongBits(other.totalTime)) {
             return false;
         }
+        if (!Objects.equals(this.playerPlaying, other.playerPlaying)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.inventory, other.inventory)) {
+            return false;
+        }
+        if (!Objects.equals(this.map, other.map)) {
+            return false;
+        }
+        if (!Objects.equals(this.characters, other.characters)) {
+            return false;
+        }
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Game{" + "noPlayers=" + noPlayers + ", totalTime=" + totalTime + ", playerPlaying=" + playerPlaying + ", inventory=" + inventory + ", map=" + map + ", characters=" + characters + '}';
     }
     
     
+   
+
+
 }

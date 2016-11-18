@@ -37,7 +37,10 @@ public class MapControl {
 
     } 
 
-    static Map createMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   public static Map createMap() {
+       Map map = null;
+       
+       System.out.println("Working");
+       return map;
     }
 }

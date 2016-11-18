@@ -43,4 +43,16 @@ public enum Weapons implements Serializable {
     public String getDescription() {
         return description;
     }
+
+    public void setName(String baseball_Bat__Take_me_out_to_the_ball_gam) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setStrength(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setDescription(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
