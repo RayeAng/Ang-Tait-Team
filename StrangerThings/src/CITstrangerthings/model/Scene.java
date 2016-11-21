@@ -18,6 +18,24 @@ public class Scene implements Serializable{
     private String description;
     private String itemPresent;
     private String monsterPresent;
+    private String mapSign;
+    private boolean restricted;
+
+    public boolean getRestricted() {
+        return false;
+    }
+
+    public void setRestricted(boolean restricted) {
+        this.restricted = restricted;
+    }
+
+    public String getMapSign() {
+        return mapSign;
+    }
+
+    public void setMapSign(String mapSign) {
+        this.mapSign = mapSign;
+    }
     
     private ResourceTypeScene itemPickup;
 

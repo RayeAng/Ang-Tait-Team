@@ -11,12 +11,13 @@ package CITstrangerthings.model;
  */
 public enum SceneEnum {
     start,
-    value,
-    value1,
-    value2,
-    valud4,
-    valudsflk,
-     dsfjds, 
-     dkafj;
+    school,
+    forest,
+    weirdNeighbor,
+    teacherOffice,
+    governmentBuilding,
+     sherrifOffice, 
+     upsideDown,
+     cliffSide;
     
 }
