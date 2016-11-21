@@ -14,6 +14,7 @@ import CITstrangerthings.model.Weapons;
 import java.util.ArrayList;
 import strangerthings.StrangerThings;
 import CITstrangerthings.model.Character;
+import CITstrangerthings.model.Location;
 import CITstrangerthings.model.Scene;
 import CITstrangerthings.model.SceneEnum;
 
@@ -221,6 +222,12 @@ public class GameControl {
 
 
     private static void assignsScenesToLocations(Map map, Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Location[][] locations = map.getLocations();
+        
+        locations [0][1].setScene(scenes[SceneEnum.school.ordinal()]);
+        locations [0][2].setScene(scenes[SceneEnum.school.ordinal()]);
+        locations [0][3].setScene(scenes[SceneEnum.forest.ordinal()]);
+        locations [0][4].setScene(scenes[SceneEnum.forest.ordinal()]);
+        locations [0][5].setScene(scenes[SceneEnum.forest.ordinal()]);
     }
 }
