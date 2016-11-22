@@ -16,8 +16,8 @@ public enum SceneEnum {
     weirdNeighbor,
     teacherOffice,
     governmentBuilding,
-     sherrifOffice, 
-     upsideDown,
-     cliffSide;
+    sherrifOffice, 
+    upsideDown,
+    cliffSide;
     
 }

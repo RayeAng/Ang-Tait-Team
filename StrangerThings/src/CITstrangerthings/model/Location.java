@@ -56,6 +56,22 @@ public class Location implements Serializable {
     public void setVisit(boolean visit) {
         this.visit = visit;
     }
+    
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
+    public ArrayList<Character> getCharacters() {
+        return characters;
+    }
+
+    public void setCharacters(ArrayList<Character> characters) {
+        this.characters = characters;
+    }
 
     @Override
     public int hashCode() {

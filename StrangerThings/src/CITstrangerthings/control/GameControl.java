@@ -224,10 +224,30 @@ public class GameControl {
     private static void assignsScenesToLocations(Map map, Scene[] scenes) {
         Location[][] locations = map.getLocations();
         
-        locations [0][1].setScene(scenes[SceneEnum.school.ordinal()]);
+        locations [0][0].setScene(scenes[SceneEnum.school.ordinal()]);
+        locations [0][1].setScene(scenes[SceneEnum.teacherOffice.ordinal()]);
         locations [0][2].setScene(scenes[SceneEnum.school.ordinal()]);
         locations [0][3].setScene(scenes[SceneEnum.forest.ordinal()]);
         locations [0][4].setScene(scenes[SceneEnum.forest.ordinal()]);
-        locations [0][5].setScene(scenes[SceneEnum.forest.ordinal()]);
+        locations [1][0].setScene(scenes[SceneEnum.____.ordinal()]);
+        locations [1][1].setScene(scenes[SceneEnum.____.ordinal()]);
+        locations [1][2].setScene(scenes[SceneEnum.____.ordinal()]);
+        locations [1][3].setScene(scenes[SceneEnum.governmentBuilding.ordinal()]);
+        locations [1][4].setScene(scenes[SceneEnum.governmentBuilding.ordinal()]);
+        locations [2][0].setScene(scenes[SceneEnum.____.ordinal()]);
+        locations [2][1].setScene(scenes[SceneEnum.____.ordinal()]);
+        locations [2][2].setScene(scenes[SceneEnum.____.ordinal()]);
+        locations [2][3].setScene(scenes[SceneEnum.governmentBuilding.ordinal()]);
+        locations [2][4].setScene(scenes[SceneEnum.governmentBuilding.ordinal()]);
+        locations [3][0].setScene(scenes[SceneEnum.weirdNeighbor.ordinal()]);
+        locations [3][1].setScene(scenes[SceneEnum.____.ordinal()]);
+        locations [3][2].setScene(scenes[SceneEnum.____.ordinal()]);
+        locations [3][3].setScene(scenes[SceneEnum.governmentBuilding.ordinal()]);
+        locations [3][4].setScene(scenes[SceneEnum.upsideDown.ordinal()]);
+        locations [4][0].setScene(scenes[SceneEnum.weirdNeighbor.ordinal()]);
+        locations [4][1].setScene(scenes[SceneEnum.start.ordinal()]);
+        locations [4][2].setScene(scenes[SceneEnum.sherrifOffice.ordinal()]);
+        locations [4][3].setScene(scenes[SceneEnum.forest.ordinal()]);
+        locations [4][4].setScene(scenes[SceneEnum.cliffSide.ordinal()]);
     }
 }
