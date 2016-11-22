@@ -79,23 +79,23 @@ public class GameMenuView extends View{
     }
 
     private void showInventory() {
-        StringBuilder line;
+        StringBuilder word;
         
         Game game = StrangerThings.getCurrentGame();
         Items[] inventory = game.getInventory();
         
         System.out.println("\n++++ List of items you have ++++");
-        line = new StringBuilder("                                                                      ");
-        line.insert(0, "Name");
-        line.insert(50, "Quantity");
-        System.out.println(line.toString());
+        word = new StringBuilder("                                                                      ");
+        word.insert(0, "Name");
+        word.insert(50, "Quantity");
+        System.out.println(word.toString());
                         
         for (Items item : inventory) {
-            line = new StringBuilder("                                                                      ");
-            line.insert(0, item.getItemType());
-            line.insert(50, item.getItemAmount());
+            word = new StringBuilder("                                                                      ");
+            word.insert(0, item.getItemType());
+            word.insert(50, item.getItemAmount());
             
-            System.out.println(line.toString());
+            System.out.println(word.toString());
         }
     }
 
