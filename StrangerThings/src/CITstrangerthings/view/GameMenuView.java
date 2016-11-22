@@ -5,7 +5,10 @@
  */
 package CITstrangerthings.view;
 
+import CITstrangerthings.model.Game;
+import CITstrangerthings.model.Items;
 import java.util.Scanner;
+import strangerthings.StrangerThings;
 
 /**
  *
@@ -76,7 +79,24 @@ public class GameMenuView extends View{
     }
 
     private void showInventory() {
-        System.out.println("\n*** show inventory working   ***");
+        StringBuilder line;
+        
+        Game game = StrangerThings.getCurrentGame();
+        Items[] inventory = game.getInventory();
+        
+        System.out.println("\n++++ List of items you have ++++");
+        line = new StringBuilder("                                                                      ");
+        line.insert(0, "Name");
+        line.insert(50, "Quantity");
+        System.out.println(line.toString());
+                        
+        for (Items item : inventory) {
+            line = new StringBuilder("                                                                      ");
+            line.insert(0, item.getItemType());
+            line.insert(50, item.getItemAmount());
+            
+            System.out.println(line.toString());
+        }
     }
 
     private void showMap() {
