@@ -246,7 +246,7 @@ public class GameControl {
         locations [3][4].setScene(scenes[SceneEnum.governmentBuilding.ordinal()]);
         locations [4][0].setScene(scenes[SceneEnum.weirdNeighbor.ordinal()]);
         locations [4][1].setScene(scenes[SceneEnum.construction.ordinal()]);
-        locations [4][2].setScene(scenes[SceneEnum.threeway.ordinal()]);
+        locations [4][2].setScene(scenes[SceneEnum.threeWay.ordinal()]);
         locations [4][3].setScene(scenes[SceneEnum.forest.ordinal()]);
         locations [4][4].setScene(scenes[SceneEnum.willsHouse.ordinal()]);
         locations [5][0].setScene(scenes[SceneEnum.weirdNeighbor.ordinal()]);
