@@ -133,7 +133,7 @@ public class GameControl {
                 + "\nfor weeks, and now you think it is time to rid the town of monsters for good, and to save your friend"
                 + "\nWill!  He must be really scared in the Upside-Down. As of right now, your party consists of Mike, Lucas"
                 + "\nDustin.");
-        startingScene.setMapSign(" FT ");
+        startingScene.setMapSign(" ⌂ ");
         startingScene.setRestricted(false);
         scenes[SceneEnum.start.ordinal()] = startingScene;
         
@@ -216,6 +216,60 @@ public class GameControl {
         cliffSideScene.setMapSign(" ▲‼ ");
         cliffSideScene.setRestricted(true);
         scenes[SceneEnum.cliffSide.ordinal()] = cliffSideScene; 
+        
+        Scene candyScene = new Scene();
+        candyScene.setDescription(
+        "It's a candy shop! Best candy in town, but you're banned from it because the shopkeeper caught you "
+                + "\nstealing a few years ago.");
+        candyScene.setMapSign(" M&M ");
+        candyScene.setRestricted(true);
+        scenes[SceneEnum.candy.ordinal()] = candyScene; 
+        
+         Scene graveyardScene = new Scene();
+        graveyardScene.setDescription(
+        "No child in town likes the graveyard.  There are always spooking sightings of 'ghosts' and 'ghouls'!  "
+                + "\nIt seems even scarier and darker since Will disappeared.");
+        graveyardScene.setMapSign(" ∩∩∩ ");
+        graveyardScene.setRestricted(true);
+        scenes[SceneEnum.graveyard.ordinal()] = graveyardScene;
+        
+         Scene parkScene = new Scene();
+        parkScene.setDescription(
+        "The park of the school.  It is for little kids.  You wouldn't be caught dead playing here...."
+                + "\nunder normal circumstances....");
+        parkScene.setMapSign(" PK ");
+        parkScene.setRestricted(true);
+        scenes[SceneEnum.park.ordinal()] = parkScene;
+        
+         Scene threeWayScene = new Scene();
+        threeWayScene.setDescription(
+        "Actually a 4-way, but the town is under quarantine from the sherrif while Will is missing.");
+        threeWayScene.setMapSign(" *** ");
+        threeWayScene.setRestricted(true);
+        scenes[SceneEnum.threeWay.ordinal()] = threeWayScene;
+        
+          Scene constructionScene = new Scene();
+        constructionScene.setDescription(
+        "Construction Zone, no Trespassing.  None.  At all.  ");
+        constructionScene.setMapSign(" ║no║ ");
+        constructionScene.setRestricted(false);
+        scenes[SceneEnum.construction.ordinal()] = constructionScene;
+        
+          Scene playgroundScene = new Scene();
+        playgroundScene.setDescription(
+        "Your backyard!  It has a fort and everything!  People think this is our secret place, but"
+                + "\nthat's just a cover.  It's where cool kids go to play. ");
+        playgroundScene.setMapSign(" FT ");
+        playgroundScene.setRestricted(true);
+        scenes[SceneEnum.playground.ordinal()] = playgroundScene;
+        
+          Scene willsHouseScene = new Scene();
+        willsHouseScene.setDescription(
+        "This is where Will lives.  His mom has been very sad ever since he disappeared.  Maybe "
+                + "\nyou can search for some clues here. ");
+        willsHouseScene.setMapSign(" WH ");
+        willsHouseScene.setRestricted(true);
+        scenes[SceneEnum.willsHouse.ordinal()] = willsHouseScene;
         
         return scenes;
     }
