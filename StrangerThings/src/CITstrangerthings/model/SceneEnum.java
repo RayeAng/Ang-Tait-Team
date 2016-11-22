@@ -18,6 +18,13 @@ public enum SceneEnum {
     governmentBuilding,
     sherrifOffice, 
     upsideDown,
-    cliffSide;
+    cliffSide,
+    candy,
+    graveyard,
+    park,
+    threeWay,
+    construction,
+    playground,
+    willsHouse;
     
 }

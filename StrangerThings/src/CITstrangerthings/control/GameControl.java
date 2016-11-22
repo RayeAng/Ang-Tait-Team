@@ -114,7 +114,7 @@ public class GameControl {
     }
     private static Map createMap(){
   
-        Map map = new Map(5, 5);
+        Map map = new Map(6, 5);
         
         Scene[] scenes = createScenes();
         
