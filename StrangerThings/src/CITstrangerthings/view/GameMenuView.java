@@ -5,8 +5,11 @@
  */
 package CITstrangerthings.view;
 
+import CITstrangerthings.control.GameControl;
 import CITstrangerthings.model.Game;
 import CITstrangerthings.model.Items;
+import CITstrangerthings.model.Location;
+import CITstrangerthings.model.Map;
 import java.util.Scanner;
 import strangerthings.StrangerThings;
 
@@ -100,9 +103,20 @@ public class GameMenuView extends View{
     }
 
     private void showMap() {
-        System.out.println("\n*** show map working  ***");
+        System.out.println("The Map of MetroCity");
+        StringBuilder mapDemo;
+        mapDemo = new StringBuilder ("                                    ");
+        mapDemo.insert(4,  "1");
+        mapDemo.insert(11, "2");
+        mapDemo.insert(19, "3");
+        mapDemo.insert(26, "4");
+        mapDemo.insert(33, "5");
+        System.out.println(mapDemo.toString());
+        
+       
+        
+        
     }
-
     private void saveGame() {
         System.out.println("\n*** save game working  ***");
     }

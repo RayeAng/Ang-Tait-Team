@@ -124,6 +124,8 @@ public class Game implements Serializable{
     public String toString() {
         return "Game{" + "noPlayers=" + noPlayers + ", totalTime=" + totalTime + ", playerPlaying=" + playerPlaying + ", inventory=" + inventory + ", map=" + map + ", characters=" + characters + '}';
     }
+
+  
     
     
    
