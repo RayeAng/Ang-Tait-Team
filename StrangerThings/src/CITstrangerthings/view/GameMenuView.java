@@ -103,7 +103,10 @@ public class GameMenuView extends View{
     }
 
     private void showMap() {
-        System.out.println("The Map of MetroCity");
+       
+        
+       
+        System.out.println("     The Map of MetroCity");
         StringBuilder mapDemo;
         mapDemo = new StringBuilder ("                                    ");
         mapDemo.insert(4,  "1");
