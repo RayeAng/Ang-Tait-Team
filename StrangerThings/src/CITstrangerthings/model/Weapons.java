@@ -15,7 +15,6 @@ import java.util.Objects;
  * @author tibbit13
  */
 public enum Weapons implements Serializable {
-    
     BaseballBat("Baseball bat", 12, "A baseball bat belonging to the Baseball team. It is worn out."),
     Plank("2x4 Wooden Plank", 5, "This is a piece of wood."),
     TennisRacket("Tennis Racket", 10, "Once owned by Rod Laver!"),

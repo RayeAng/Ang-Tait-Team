@@ -13,7 +13,6 @@ import java.util.Objects;
  * @author tibbit13
  */
 public class Scene implements Serializable{
-    
     private String sceneName;
     private String description;
     private String itemPresent;

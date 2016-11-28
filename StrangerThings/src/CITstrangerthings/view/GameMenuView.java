@@ -116,9 +116,7 @@ public class GameMenuView extends View{
         mapDemo.insert(33, "5");
         System.out.println(mapDemo.toString());
         
-       
-        
-        
+        //Work here
     }
     private void saveGame() {
         System.out.println("\n*** save game working  ***");

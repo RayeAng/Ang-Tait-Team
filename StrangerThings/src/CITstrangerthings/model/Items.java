@@ -21,8 +21,6 @@ public class Items implements Serializable{
     public Items() {
     }
     
-    
-
     public String getItemType() {
         return itemType;
     }

@@ -19,7 +19,6 @@ public class Location implements Serializable {
     private boolean visit;
     private Scene scene;
     private ArrayList<Character> characters;
-    
     private Scene setting;
 
     public Scene getSetting() {

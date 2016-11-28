@@ -113,13 +113,9 @@ public class GameControl {
         
     }
     private static Map createMap(){
-  
         Map map = new Map(6, 5);
-        
         Scene[] scenes = createScenes();
-        
         GameControl.assignsScenesToLocations(map, scenes);
-    
     return map;
     }
 

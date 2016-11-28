@@ -26,5 +26,4 @@ public enum SceneEnum {
     construction,
     playground,
     willsHouse;
-    
 }

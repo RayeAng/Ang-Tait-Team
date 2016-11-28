@@ -32,7 +32,6 @@ public class Map implements Serializable {
     }
        this.rowCount = rowCount;
        this.columnCount = columnCount;
-       
        this.locations = new Location[rowCount][columnCount];
        
        for (int row = 0; row < rowCount; row++){
@@ -46,8 +45,6 @@ public class Map implements Serializable {
                locations[row][column] = location;
            }
        }
-       
-       
     }
 
     public double getRowCount() {
