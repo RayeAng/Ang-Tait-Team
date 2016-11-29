@@ -36,20 +36,24 @@ public class MapControl {
 
     public static Map createMap() {
 
-        System.out.println("     The Map of MetroCity");
-        System.out.println("    1    2    3    4    5   ");
+        System.out.println("\n     The Map of MetroCity");
+        System.out.println("\n    1       2       3       4       5");
 
-        System.out.println("++++++++++++++++++++++++++++++++++");
+       
 
-        for (int i = 0; i < 4; i++) {
-            System.out.print("|");
-
-            System.out.print("??");
-            System.out.print("|");
+        for (int i = 0; i < 5; i++) {
+            
+           System.out.print(i+1+"  ");
             for (int j = 0; j < 5; j++) {
-                System.out.println("------------------------------");
+                 System.out.print("|");
+                 System.out.print("??");
+                 System.out.print("|");
+                 System.out.print("    ");
+
             }
+            System.out.println("\n");
         }
+        System.out.println("\n------------------------------");
         return null;
     }
 }
