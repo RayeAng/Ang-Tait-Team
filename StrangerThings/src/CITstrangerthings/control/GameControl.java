@@ -47,7 +47,7 @@ public class GameControl {
         ArrayList<Character> characters= GameControl.createCharacters();
         game.setCharacters(characters);
 
-        Map map = MapControl.createMap();
+        Map map = GameControl.createMap();
         game.setMap(map);
         
 //        MapControl.moveActorsToStartingLocation(map);

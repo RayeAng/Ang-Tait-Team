@@ -105,7 +105,7 @@ public class GameMenuView extends View{
 
     private void showMap() {
      MapControl display = new MapControl();
-     display.createMap();
+     display.displayMap();
         //Work here
     }
     private void saveGame() {

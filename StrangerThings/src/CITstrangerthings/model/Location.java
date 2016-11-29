@@ -16,7 +16,7 @@ import java.util.Objects;
 public class Location implements Serializable {
     private double row;
     private double column;
-    private boolean visit;
+    private boolean visit = false;
     private Scene scene;
     private ArrayList<Character> characters;
     private Scene setting;
