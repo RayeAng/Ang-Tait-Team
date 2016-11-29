@@ -6,6 +6,7 @@
 package CITstrangerthings.view;
 
 import CITstrangerthings.control.GameControl;
+import CITstrangerthings.control.MapControl;
 import CITstrangerthings.model.Game;
 import CITstrangerthings.model.Items;
 import CITstrangerthings.model.Location;
@@ -103,19 +104,8 @@ public class GameMenuView extends View{
     }
 
     private void showMap() {
-       
-        
-       
-        System.out.println("     The Map of MetroCity");
-        StringBuilder mapDemo;
-        mapDemo = new StringBuilder ("                                    ");
-        mapDemo.insert(4,  "1");
-        mapDemo.insert(11, "2");
-        mapDemo.insert(19, "3");
-        mapDemo.insert(26, "4");
-        mapDemo.insert(33, "5");
-        System.out.println(mapDemo.toString());
-        
+     MapControl display = new MapControl();
+     display.createMap();
         //Work here
     }
     private void saveGame() {
