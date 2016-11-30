@@ -46,8 +46,8 @@ public class MapControl {
 
         for (int i = 0; i < locations.length; i++) {
             
-           System.out.println("----------------------");
-           System.out.println(i+1);
+           System.out.print("\n----------------------\n");
+           System.out.print(i+1);
             for (int j = 0; j < locations[i].length; j++) {
                  System.out.print("|");
                  Location location = locations[i][j];

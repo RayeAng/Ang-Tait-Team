@@ -30,8 +30,8 @@ public class Map implements Serializable {
            System.out.println("rows and columns must be greater than 0!");
        return;
     }
-       this.rowCount = rowCount;
-       this.columnCount = columnCount;
+       this.rowCount = rows;
+       this.columnCount = columns;
        this.locations = new Location[rowCount][columnCount];
        
        for (int row = 0; row < rowCount; row++){
