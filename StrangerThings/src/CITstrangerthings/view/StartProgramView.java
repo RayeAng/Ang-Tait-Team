@@ -15,11 +15,7 @@ import strangerthings.StrangerThings;
 // + @author Raye Ang
 // +/
 public class StartProgramView extends View{
-    
-    
-
     public StartProgramView(){
-        
                 super("\n+++++++++++++++++++++++++++++++++++++++++++++"
                 + "\n+ This is the game of Stranger Things!    +"
                 + "\n+ In this game, you will help a group of  +"
@@ -43,7 +39,6 @@ public class StartProgramView extends View{
                 + "\n+ your friend Will will be be free.       +"
                 + "\n+++++++++++++++++++++++++++++++++++++++++++"
                 + "\nPlease Enter Your Name: "
-                        
         );
     }
 

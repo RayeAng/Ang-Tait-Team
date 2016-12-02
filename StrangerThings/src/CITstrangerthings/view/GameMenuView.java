@@ -8,7 +8,7 @@ package CITstrangerthings.view;
 import CITstrangerthings.control.GameControl;
 import CITstrangerthings.control.MapControl;
 import CITstrangerthings.model.Game;
-import CITstrangerthings.model.Items;
+import CITstrangerthings.model.Item;
 import CITstrangerthings.model.Location;
 import CITstrangerthings.model.Map;
 import java.util.Scanner;
@@ -86,19 +86,20 @@ public class GameMenuView extends View{
         StringBuilder word;
         
         Game game = StrangerThings.getCurrentGame();
-        Items[] inventory = game.getInventory();
+        Item[] inventory = game.getInventory();
         
-        System.out.println("\n++++ List of items you have ++++");
+        Item[] sort_inventory = GameControl.inventory_srt(inventory);
+        
+        System.out.println("\n       ++++ List of items you have ++++");
         word = new StringBuilder("                                                                      ");
         word.insert(0, "Name");
         word.insert(50, "Quantity");
         System.out.println(word.toString());
                         
-        for (Items item : inventory) {
+        for (Item item : sort_inventory) {
             word = new StringBuilder("                                                                      ");
             word.insert(0, item.getItemType());
             word.insert(50, item.getItemAmount());
-            
             System.out.println(word.toString());
         }
     }

@@ -9,7 +9,7 @@ import CITstrangerthings.model.Game;
 import CITstrangerthings.model.Player;
 import CITstrangerthings.model.Weapons;
 import CITstrangerthings.model.Character;
-import CITstrangerthings.model.Items;
+import CITstrangerthings.model.Item;
 import CITstrangerthings.model.Location;
 import CITstrangerthings.model.Map;
 import CITstrangerthings.model.Scene;

@@ -19,7 +19,7 @@ public class Game implements Serializable{
     private double totalTime;
     
     private Player playerPlaying;
-    private Items[] inventory;
+    private Item[] inventory;
     private Map map;
     private ArrayList<Character> characters;
     
@@ -51,11 +51,11 @@ public class Game implements Serializable{
         this.playerPlaying = playerPlaying;
     }
 
-    public Items[] getInventory() {
+    public Item[] getInventory() {
         return inventory;
     }
 
-    public void setInventory(Items[] inventory) {
+    public void setInventory(Item[] inventory) {
         this.inventory = inventory;
     }
 

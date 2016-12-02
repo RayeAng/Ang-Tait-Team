@@ -67,7 +67,6 @@ public class MapControl {
             }
             System.out.print("  |");
             
-            
         }
         System.out.println("\n   ------------------------------------");
         return null;

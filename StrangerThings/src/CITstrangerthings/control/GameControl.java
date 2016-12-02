@@ -7,10 +7,9 @@ package CITstrangerthings.control;
 
 import CITstrangerthings.model.Game;
 import CITstrangerthings.model.ItemEnum;
-import CITstrangerthings.model.Items;
+import CITstrangerthings.model.Item;
 import CITstrangerthings.model.Map;
 import CITstrangerthings.model.Player;
-import CITstrangerthings.model.Weapons;
 import java.util.ArrayList;
 import strangerthings.StrangerThings;
 import CITstrangerthings.model.Character;
@@ -41,7 +40,7 @@ public class GameControl {
 
         game.setPlayerPlaying(player);
 
-        Items[] items = GameControl.createItems();
+        Item[] items = GameControl.createItems();
         game.setInventory(items);
 
         ArrayList<Character> characters= GameControl.createCharacters();
@@ -55,41 +54,41 @@ public class GameControl {
 
     }
 
-    private static Items[] createItems() {
-        Items[] items = new Items[6];
+    private static Item[] createItems() {
+        Item[] items = new Item[6];
 
-        Items nails = new Items();
+        Item nails = new Item();
         nails.setItemType("Nails");
         nails.setItemAmount(0);
         nails.setRequiredAmount(0);
         items[ItemEnum.nails.ordinal()] = nails;
 
-        Items barbedWire = new Items();
+        Item barbedWire = new Item();
         barbedWire.setItemType("Barbed-Wire, ouchy wa wa!");
         barbedWire.setItemAmount(0);
         barbedWire.setRequiredAmount(0);
         items[ItemEnum.barbedWire.ordinal()] = barbedWire;
 
-        Items glassShards = new Items();
+        Item glassShards = new Item();
         glassShards.setItemType("Glass Shards of death");
         glassShards.setItemAmount(0);
         glassShards.setRequiredAmount(0);
         items[ItemEnum.glassShards.ordinal()] = glassShards;
 
-        Items thorns = new Items();
+        Item thorns = new Item();
         thorns.setItemType("Thorns from a tree");
         thorns.setItemAmount(0);
         thorns.setRequiredAmount(0);
         items[ItemEnum.thorns.ordinal()] = thorns;
 
-        Items rocks = new Items();
+        Item rocks = new Item();
         rocks.setItemType("Rocks, they hurt in the head!");
         rocks.setItemAmount(0);
         rocks.setItemAmount(0);
         rocks.setRequiredAmount(0);
         items[ItemEnum.rocks.ordinal()] = rocks;
 
-        Items metal = new Items();
+        Item metal = new Item();
         metal.setItemType("Metal, sharpened with a pencil sharpener?!");
         metal.setItemAmount(0);
         metal.setItemAmount(0);
@@ -304,5 +303,29 @@ public class GameControl {
         locations [5][2].setScene(scenes[SceneEnum.playground.ordinal()]);
         locations [5][3].setScene(scenes[SceneEnum.forest.ordinal()]);
         locations [5][4].setScene(scenes[SceneEnum.cliffSide.ordinal()]);
+    }
+    
+    public static Item[] inventory_srt(Item[] items) {
+        Item[] sortedList = items.clone();
+        
+        int n = items.length; {
+            int k;
+            for (int m = n;m >= 0; m--) {
+                for (int i = 0; i < n-1; i++) {
+                    k = i+1;
+                    if (sortedList[i].getItemType().compareTo(sortedList[k].getItemType()) > 0) {
+                    swapNumbers(i,k,sortedList);
+                    }
+                }
+            }
+        return sortedList;
+        }
+    };
+
+    private static void swapNumbers(int i, int k, Item[] items) {
+        Item temp;
+        temp = items[i];
+        items[i] = items[k];
+        items[k] = temp;
     }
 }

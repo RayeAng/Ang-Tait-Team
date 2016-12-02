@@ -12,13 +12,12 @@ import java.util.Objects;
  *
  * @author tibbit13
  */
-public class Items implements Serializable{
-    
+public class Item implements Serializable{
     private String itemType;
     private double itemAmount; 
     private double requiredAmount;
 
-    public Items() {
+    public Item() {
     }
     
     public String getItemType() {
@@ -59,8 +58,6 @@ public class Items implements Serializable{
         return "Items{" + "itemType=" + itemType + ", itemAmount=" + itemAmount + ", requiredAmount=" + requiredAmount + '}';
     }
     
-    
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -72,7 +69,7 @@ public class Items implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Items other = (Items) obj;
+        final Item other = (Item) obj;
         if (Double.doubleToLongBits(this.itemAmount) != Double.doubleToLongBits(other.itemAmount)) {
             return false;
         }
@@ -84,9 +81,4 @@ public class Items implements Serializable{
         }
         return true;
     }
-
-  
-    
-    
-    
 }

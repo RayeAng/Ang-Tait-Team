@@ -27,13 +27,10 @@ public class MainMenuView extends View{
             + "\nH - Help Menu"
             + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     }
-@Override
-public boolean doAction (String value){
-
-    value = value.toUpperCase();{
-}
-//    boolean doAction(String menuOption) {
-//        menuOption = menuOption.toUpperCase();
+    @Override
+    public boolean doAction (String value){
+        value = value.toUpperCase();{
+    }
         
         switch (value){
             case "N":
