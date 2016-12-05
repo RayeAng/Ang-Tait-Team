@@ -11,6 +11,7 @@ import CITstrangerthings.model.Game;
 import CITstrangerthings.model.Item;
 import CITstrangerthings.model.Location;
 import CITstrangerthings.model.Map;
+import CITstrangerthings.model.Scene;
 import java.util.Scanner;
 import strangerthings.StrangerThings;
 
@@ -105,9 +106,38 @@ public class GameMenuView extends View{
     }
 
     private void showMap() {
-     MapControl display = new MapControl();
-     display.displayMap();
+        StringBuilder word;
+        System.out.println("\n     The Map of MetroCity");
+        word = new StringBuilder("                                                                      ");
+        word.insert(6, "1");
+        word.insert(13, "2");
+        word.insert(20, "3");
+        word.insert(27, "4");
+        word.insert(34, "5");
+        System.out.print(word.toString()); 
+        
+       Location[][] locations = StrangerThings.getCurrentGame().getMap().getLocations();
+           for (int i = 0; i < locations.length; i++) {
+            
+            System.out.print("\n   ------------------------------------\n");
+            System.out.print(i+1);
+                for (int j = 0; j < locations[i].length; j++) {
+                     System.out.print("  |  ");
+                     Location location = locations[i][j];
+                     Scene scene = location.getScene();
+                     boolean visit = location.getVisit();
+                     if (visit == true) {
+                         System.out.print(scene.getMapSign()+" ");
+                     }
+                     else {
+                         System.out.print("??");
+                     }
+                }
+            System.out.print("  |");
+        }
+        System.out.println("\n   ------------------------------------");
     }
+    
     private void saveGame() {
         System.out.println("\n*** save game working  ***");
     }

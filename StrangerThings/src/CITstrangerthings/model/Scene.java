@@ -58,8 +58,6 @@ public class Scene implements Serializable{
     public Scene() {
     }
     
-    
-
     public String getSceneName() {
         return sceneName;
     }
@@ -107,7 +105,6 @@ public class Scene implements Serializable{
         return "Scene{" + "sceneName=" + sceneName + ", description=" + description + ", itemPresent=" + itemPresent + ", monsterPresent=" + monsterPresent + '}';
     }
     
-
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -134,7 +131,4 @@ public class Scene implements Serializable{
         }
         return true;
     }
-    
-    
-    
 }

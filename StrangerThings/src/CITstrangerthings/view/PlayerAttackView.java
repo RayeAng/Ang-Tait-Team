@@ -15,7 +15,9 @@ public class PlayerAttackView extends View {
     public PlayerAttackView() {
         super("\n"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
-                + "\n You have found a monster, and have chosen to attack.  How fast should you swing your weapon?"
+                + "\nYou have found a monster, and have"
+                + "\nchosen to attack.  How fast would"
+                + "\nyou swing your weapon?"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     }
 
@@ -24,9 +26,10 @@ public class PlayerAttackView extends View {
         playerChoice = playerChoice.toUpperCase();
         int swing = Integer.parseInt(playerChoice);
         double value = PlayerControl.playerAttack(swing, 5);
-        //if the return value is -1, then
         if (value==-1){
-            System.out.println("Error, your input was terrible.");
+            System.out.println("Error, your input was either immpossible"
+                    + "\nor too wimpy to be called"
+                    + "\nan attack.");
             return false;
         }
         
