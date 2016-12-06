@@ -14,27 +14,26 @@ import strangerthings.StrangerThings;
  */
 public class MapControl {
 
-    public static int marbleCount(int userAnswer, int x, int y) throws MapControlException {
+    public static void marbleCount(int userAnswer, int x, int y) throws MapControlException {
 
         if (userAnswer < 1 || userAnswer > 342) {
             throw new MapControlException("Either you're answering less marbles"
                     + "\nor more marbles than you can carry.");
         }
         if (x < 1 || x > 342) {
-            return -1;
+            throw new MapControlException("Random x-value out of range");
         }
         if (y < 1 || y > 100) {
-            return -1;
+            throw new MapControlException("Random y-value out of range");
         }
         int compAns = (int) (((((double) x / 2) + (double) y) / 3) * 2);
 
         if (userAnswer != compAns) {
-            return 0;
-        } else {
-            return 1;
-        }
+            throw new MapControlException("Your answer is quite false");
+        } 
 
     }
+    
 
     
 }
