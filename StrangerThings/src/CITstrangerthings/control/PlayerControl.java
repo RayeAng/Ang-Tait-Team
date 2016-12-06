@@ -5,6 +5,8 @@
  */
 package CITstrangerthings.control;
 
+import CITstrangerthings.exceptions.PlayerControlException;
+
 /**
  *
  * @author tibbit13
@@ -31,12 +33,12 @@ public class PlayerControl {
         }
     }
 
-    public static double playerAttack (int userSwing, int weaponStrength) {
+    public static double playerAttack (int userSwing, int weaponStrength) throws PlayerControlException{
         if (userSwing < 1 || userSwing > 75) {
-            return -1;
+            throw new PlayerControlException("Cannot swing weapon that slow.");
          }
         if (weaponStrength < 1) {
-            return -1;
+            throw new PlayerControlException("Invalid weapon strength.");
         }
 
         double totalForce = weaponStrength * userSwing /60;

@@ -5,6 +5,7 @@
  */
 package CITstrangerthings.control;
 
+import CITstrangerthings.exceptions.MapControlException;
 import strangerthings.StrangerThings;
 
 /**
@@ -13,10 +14,11 @@ import strangerthings.StrangerThings;
  */
 public class MapControl {
 
-    public static int marbleCount(int userAnswer, int x, int y) {
+    public static int marbleCount(int userAnswer, int x, int y) throws MapControlException {
 
         if (userAnswer < 1 || userAnswer > 342) {
-            return -1;
+            throw new MapControlException("Either you're answering less marbles"
+                    + "\nor more marbles than you can carry.");
         }
         if (x < 1 || x > 342) {
             return -1;

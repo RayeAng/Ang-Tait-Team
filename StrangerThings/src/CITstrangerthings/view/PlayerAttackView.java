@@ -6,6 +6,7 @@
 package CITstrangerthings.view;
 
 import CITstrangerthings.control.PlayerControl;
+import CITstrangerthings.exceptions.PlayerControlException;
 
 /**
  *
@@ -25,18 +26,14 @@ public class PlayerAttackView extends View {
     public boolean doAction(String playerChoice) {
         playerChoice = playerChoice.toUpperCase();
         int swing = Integer.parseInt(playerChoice);
-        double value = PlayerControl.playerAttack(swing, 5);
-        if (value==-1){
-            System.out.println("Error, your input was either immpossible"
-                    + "\nor too wimpy to be called"
-                    + "\nan attack.");
-            return false;
-        }
-        
-        else {
+        try {
+            double value = PlayerControl.playerAttack(swing, 5);
             System.out.println("You hit the monster with " + value + "! He is dead.");
             return true;
-            
-        }        
+        }
+        catch (PlayerControlException pa) {
+            System.out.println(pa.getMessage());
+            return false;
+        }
     }
 }
