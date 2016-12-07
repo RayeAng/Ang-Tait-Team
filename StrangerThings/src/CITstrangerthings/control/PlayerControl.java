@@ -13,21 +13,26 @@ import CITstrangerthings.exceptions.PlayerControlException;
  */
 public class PlayerControl {
 
-    public static void playerFlee(double fVel, double initVel, double time, double acc, double ans) throws PlayerControlException {
+    public static void playerFlee(double fVel, double initVel, double time, double ans) throws PlayerControlException {
         if (fVel < 1.0 || initVel < 1.0 || time < 1.0) {
             throw new PlayerControlException("You can't run that slow, flee again!");
         }
         if (fVel > 15.0 || initVel > 15.0 || time > 5.0) {
             throw new PlayerControlException("You can't run that fast either, flee again!");
         }
+        if (initVel > fVel) {
+            playerFlee(fVel, initVel, time, ans);
+        }
 
-        acc = ((fVel - initVel) / time);
+        double acc = ((fVel - initVel) / time);
 //Acceleration = ((Final Velocity - Initial Velocity)/Time);
-
+        ans =(int)(ans*100) / 100;
+        acc =(int)(acc*100) / 100;
         if (acc != ans){
             throw new PlayerControlException("Your answer was wrong, flee again or the monster will get you.");
 
         }
+        
 
         
     }

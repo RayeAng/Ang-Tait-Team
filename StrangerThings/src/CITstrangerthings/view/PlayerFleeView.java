@@ -7,6 +7,7 @@ package CITstrangerthings.view;
 
 import CITstrangerthings.control.PlayerControl;
 import CITstrangerthings.exceptions.PlayerControlException;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -14,14 +15,28 @@ import java.util.Scanner;
  * @author tibbit13
  */
 public class PlayerFleeView extends View {
+    
+    Random rand1 = new Random();
+    int init;
+    Random rand2 = new Random();
+    int finV;
+    Random rand3 = new Random();
+    int time;
 
     public PlayerFleeView() {
-        super("\n"
+        super();
+        finV = rand2.nextInt(15) + 1;
+        init = rand1.nextInt(finV) + 1;
+        
+        time = rand3.nextInt(5) + 1;
+        
+        
+        this.displayMessage= "\n"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
                 + "\n You have found a monster, and have chosen to make like dodge. \n You flee "
-                + "at an initial velocity of 7 m/s and a final velocity of 10 m/s \n in 4 seconds. "
+                + "at an initial velocity of" + init + "m/s and a final velocity of "+ finV + "m/s \n in " +time+ " seconds. "
                 + "Type in the correct acceleration to escape.  The monster \n hates kids who "
-                + "can't math good.");
+                + "can't math good.";
 
     }
 
@@ -29,10 +44,10 @@ public class PlayerFleeView extends View {
     public boolean doAction(String playerFlee) {
         
         try {
-            double acc = Double.parseDouble(playerFlee);
-            PlayerControl.playerFlee(10, 7, 4, 1.5, acc);
+            double ans = Double.parseDouble(playerFlee);
+            PlayerControl.playerFlee(this.finV, this.init, this.time, ans);
             System.out.println("You ran away from the monster with an acceleration of "
-                    + acc + "m/s squared!  The monster is soon lost in the folds of darkness.");
+                    + ans + "m/s squared!  The monster is soon lost in the folds of darkness.");
             return true;
         }
        
