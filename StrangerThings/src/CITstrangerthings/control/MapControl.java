@@ -6,6 +6,8 @@
 package CITstrangerthings.control;
 
 import CITstrangerthings.exceptions.MapControlException;
+import CITstrangerthings.model.Location;
+import CITstrangerthings.model.Character;
 import strangerthings.StrangerThings;
 
 /**
@@ -34,6 +36,17 @@ public class MapControl {
 
     }
     
-
+    public static String moveCharacter(Character character, Location[][] locations, String direction) throws MapControlException {
+        if (character == null) {
+            throw new MapControlException("You don't have a character to move!");
+        }
+        if (direction != "N" || direction != "S" || direction != "W" || direction != "E") {
+            throw new MapControlException("You cannot go that way");
+        }
+        if (locations == null) {
+            throw new MapControlException("We cannot pinpoint your party");
+        }
+        return "";
+    }
     
 }

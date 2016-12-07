@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package CITstrangerthings.model;
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -16,8 +17,24 @@ public class Character implements Serializable{
     private String characterName;
     private String description;
     private String abilities;
-    
     ArrayList <Character> party = new ArrayList<>();
+    private Point coordinates = new Point(0,0);
+
+    public ArrayList<Character> getParty() {
+        return party;
+    }
+
+    public void setParty(ArrayList<Character> party) {
+        this.party = party;
+    }
+
+    public Point getCoordinates() {
+        return coordinates;
+    }
+
+    public void setCoordinates(Point coordinates) {
+        this.coordinates = coordinates;
+    }
 
     public Character() {
     }

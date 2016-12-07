@@ -115,6 +115,9 @@ public class GameControl {
         //Starting point, changing the visited to true
         Location[][] cells = map.getLocations();
         cells[5][1].setVisit(true);
+        
+        //Assigning characters to starting location
+        cells[5][1].setCharacters(createCharacters());
     return map;
     }
 
