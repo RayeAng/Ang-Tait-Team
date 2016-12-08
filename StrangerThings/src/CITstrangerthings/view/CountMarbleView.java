@@ -44,6 +44,15 @@ public class CountMarbleView extends View {
             return true;
         } catch (MapControlException mce) {
             System.out.println(mce.getMessage());
+            System.out.println("\nYou came across a lock door. After"
+                + "\nsearching the area, you find a"
+                + "\npaper that says:"
+                + "\n"
+                + "\nAndrew had " + x + " number of "
+                + "\nmarbles. He lost half of them in"
+                + "\na match, gained " + y + " more in "
+                + "\nhis next match but lost a third"
+                + "\nof his final. ");
             return false;
         }
         
