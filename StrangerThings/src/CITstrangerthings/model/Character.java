@@ -18,7 +18,7 @@ public class Character implements Serializable{
     private String description;
     private String abilities;
     ArrayList <Character> party = new ArrayList<>();
-    private Point coordinates = new Point(0,0);
+    private Point coordinates = new Point(5,1);
 
     public ArrayList<Character> getParty() {
         return party;

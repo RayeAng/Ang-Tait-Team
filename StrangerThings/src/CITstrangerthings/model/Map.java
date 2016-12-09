@@ -5,6 +5,7 @@
  */
 package CITstrangerthings.model;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -41,6 +42,7 @@ public class Map implements Serializable {
                location.setColumn(column);
                location.setRow(row);
                location.setVisit(false);
+               location.setCharacters(new ArrayList<Character>());
                
                this.locations[row][column] = location;
            }

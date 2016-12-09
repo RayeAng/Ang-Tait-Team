@@ -5,7 +5,16 @@
  */
 package CITstrangerthings.view;
 
+import CITstrangerthings.control.MoveControl;
+import CITstrangerthings.exceptions.MapControlException;
+import CITstrangerthings.model.Location;
+import CITstrangerthings.model.Character;
+import CITstrangerthings.model.Game;
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import strangerthings.StrangerThings;
 
 /**
  *
@@ -24,41 +33,29 @@ public class MoveView extends View {
     
     @Override
     public boolean doAction(String moveOption) {
-        moveOption = moveOption.toUpperCase();
-
-        switch (moveOption) {
-            case "N":
-                this.moveNorth();
-                break;
-            case "S":
-                this.moveSouth();
-                break;
-            case "W":
-                this.moveWest();
-                break;
-            case "E":
-                this.moveEast();
-                break;
-            default:
-                System.out.println("\n*** Invalid Selection, try again. ***");
-                break;
+        try {
+            moveOption = moveOption.toUpperCase();
+            
+            this.move(moveOption);
+            
+        
+            
+        } catch (MapControlException ex) {
+            System.out.println(ex.getMessage());
+            
+            
         }
         return false;
     }
 
-    private void moveNorth() {
-        System.out.println("\nPlayer has moved north!");
+    private void move(String direction) throws MapControlException {
+        ArrayList<Character> characters = StrangerThings.getCurrentGame().getCharacters();
+        Location [][] locations = StrangerThings.getCurrentGame().getMap().getLocations();
+        
+        
+        Location newPlace = MoveControl.move(characters, locations, "N");
+        System.out.println(newPlace.getScene().getDescription());
     }
 
-    private void moveSouth() {
-        System.out.println("\nPlayer has moved south!");
-    }
-
-    private void moveWest() {
-        System.out.println("\nPlayer has moved west!");
-    }
-
-    private void moveEast() {
-        System.out.println("\nPlayer has moved east!");
-    }
+ 
 }

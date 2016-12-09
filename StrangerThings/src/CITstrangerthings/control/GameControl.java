@@ -171,7 +171,7 @@ public class GameControl {
                 + "You break in and find a safe with a note placed on it.");
         teacherOfficeScene.setMapSign(" SC ");
         teacherOfficeScene.setRestricted(false);
-        scenes[SceneEnum.school.ordinal()] = teacherOfficeScene;
+        scenes[SceneEnum.teacherOffice.ordinal()] = teacherOfficeScene;
         
         Scene governmentBuildingScene = new Scene();
         governmentBuildingScene.setDescription(

@@ -14,8 +14,8 @@ import java.util.Objects;
  * @author Raye Ang
  */
 public class Location implements Serializable {
-    private double row;
-    private double column;
+    private int row;
+    private int column;
     private boolean visit = false;
     private Scene scene;
     private ArrayList<Character> characters;
@@ -32,19 +32,19 @@ public class Location implements Serializable {
     public Location() {
     }
 
-    public double getRow() {
+    public int getRow() {
         return row;
     }
 
-    public void setRow(double row) {
+    public void setRow(int row) {
         this.row = row;
     }
 
-    public double getColumn() {
+    public int getColumn() {
         return column;
     }
 
-    public void setColumn(double column) {
+    public void setColumn(int column) {
         this.column = column;
     }
 
