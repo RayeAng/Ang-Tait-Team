@@ -17,7 +17,7 @@ public class PlayerAttackView extends View {
         super("\n"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
                 + "\nYou have found a monster, and have"
-                + "\nchosen to attack.  How fast would"
+                + "\nchosen to attack.  How fast will"
                 + "\nyou swing your weapon?"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
     }

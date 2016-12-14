@@ -30,11 +30,7 @@ public class PlayerControl {
         acc =(int)(acc*100) / 100;
         if (acc != ans){
             throw new PlayerControlException("Your answer was wrong, flee again or the monster will get you.");
-
         }
-        
-
-        
     }
 
     public static double playerAttack (int userSwing, int weaponStrength) throws PlayerControlException{
@@ -44,9 +40,7 @@ public class PlayerControl {
         if (weaponStrength < 1) {
             throw new PlayerControlException("Invalid weapon strength.");
         }
-
-        double totalForce = weaponStrength * userSwing /60;
+        double totalForce = (weaponStrength * userSwing) /60;
         return totalForce;
-
     }
 }
