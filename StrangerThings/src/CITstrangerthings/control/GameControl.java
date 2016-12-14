@@ -16,6 +16,9 @@ import CITstrangerthings.model.Character;
 import CITstrangerthings.model.Location;
 import CITstrangerthings.model.Scene;
 import CITstrangerthings.model.SceneEnum;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 /**
  *
@@ -48,6 +51,19 @@ public class GameControl {
 
         Map map = GameControl.createMap();
         game.setMap(map);
+    }
+    
+    public static void saveGame(String outputLocation, Game game) throws IOException {
+        ObjectOutputStream out = null;
+        try {
+        out = new ObjectOutputStream(new FileOutputStream(outputLocation));
+                out.writeObject(game);
+        }
+        finally {
+            if (out != null) {
+                out.close();
+            }
+        }
     }
 
     private static Item[] createItems() {

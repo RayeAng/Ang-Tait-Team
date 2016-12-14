@@ -6,6 +6,8 @@
 package CITstrangerthings.view;
 
 import CITstrangerthings.control.GameControl;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 import strangerthings.StrangerThings;
 
@@ -72,7 +74,8 @@ public class MainMenuView extends View{
     }
 
     private void saveGame() {
-        System.out.println("*** save game successful ***");
+        SavingView SavingGame = new SavingView();
+        SavingGame.display();
     }
 
     private void quitGame() {
