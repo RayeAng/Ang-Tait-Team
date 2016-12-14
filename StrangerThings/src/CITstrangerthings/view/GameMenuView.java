@@ -139,7 +139,8 @@ public class GameMenuView extends View{
     }
     
     private void saveGame() {
-        System.out.println("\n*** save game working  ***");
+        SavingView SavingGame = new SavingView();
+        SavingGame.display();
     }
 
     private void showHelp() {

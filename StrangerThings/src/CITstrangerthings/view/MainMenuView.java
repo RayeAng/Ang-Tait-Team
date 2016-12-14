@@ -24,7 +24,6 @@ public class MainMenuView extends View{
             + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
             + "\nN - Start New Game"
             + "\nL - Load Previous Game"
-            + "\nS - Save Current Game"
             + "\nQ - Quit Game"
             + "\nH - Help Menu"
             + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
@@ -40,9 +39,6 @@ public class MainMenuView extends View{
                 break;
             case "L":
                 this.loadExistingGame();
-                break;
-            case "S":
-                this.saveGame();
                 break;
             case "Q": 
                 this.quitGame();
@@ -71,11 +67,6 @@ public class MainMenuView extends View{
 
     private void loadExistingGame() {
         System.out.println("*** load game successful ***");
-    }
-
-    private void saveGame() {
-        SavingView SavingGame = new SavingView();
-        SavingGame.display();
     }
 
     private void quitGame() {
