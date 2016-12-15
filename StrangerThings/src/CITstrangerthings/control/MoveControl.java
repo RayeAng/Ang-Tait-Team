@@ -63,6 +63,7 @@ public class MoveControl {
             oldLocation.getCharacters().remove(partyMember);
             partyMember.setCoordinates(new Point(newLocation.getRow(), newLocation.getColumn()));
         }
+        newLocation.setVisit(true);
         return newLocation;
     }
 }
