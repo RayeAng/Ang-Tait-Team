@@ -17,7 +17,7 @@ import strangerthings.StrangerThings;
  */
 public class PlayerControl {
 
-    public static void playerFlee(double fVel, double initVel, double time, double ans) throws PlayerControlException {
+    public static boolean playerFlee(double fVel, double initVel, double time, double ans) throws PlayerControlException {
         if (fVel < 1.0 || initVel < 1.0 || time < 1.0) {
             throw new PlayerControlException("You can't run that slow, flee again!");
         }
@@ -30,22 +30,28 @@ public class PlayerControl {
 
         double acc = ((fVel - initVel) / time);
 //Acceleration = ((Final Velocity - Initial Velocity)/Time);
-        ans =(int)(ans*100) / 100;
-        acc =(int)(acc*100) / 100;
-        if (acc != ans){
+        ans = (int) (ans * 100) / 100;
+        acc = (int) (acc * 100) / 100;
+        if (acc != ans) {
             StrangerThings.getCurrentGame().getCharacters().remove(0);
+
+            if (StrangerThings.getCurrentGame().getCharacters().size() == 0) {
+                return true;
+
+            }
+            
             throw new PlayerControlException("Your answer was wrong, flee again or the monster will get you.");
-        }
+        } return false;
     }
 
-    public static double playerAttack (int userSwing, int weaponStrength) throws PlayerControlException{
+    public static double playerAttack(int userSwing, int weaponStrength) throws PlayerControlException {
         if (userSwing < 1 || userSwing > 75) {
             throw new PlayerControlException("Cannot swing weapon that slow.");
-         }
+        }
         if (weaponStrength < 1) {
             throw new PlayerControlException("Invalid weapon strength.");
         }
-        double totalForce = (weaponStrength * userSwing) /60;
+        double totalForce = (weaponStrength * userSwing) / 60;
         return totalForce;
     }
 }

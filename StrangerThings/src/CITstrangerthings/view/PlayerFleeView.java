@@ -41,7 +41,11 @@ public class PlayerFleeView extends View {
     public boolean doAction(String playerFlee) {
         try {
             double ans = Double.parseDouble(playerFlee);
-            PlayerControl.playerFlee(this.finV, this.init, this.time, ans);
+            boolean gameOver =  PlayerControl.playerFlee(this.finV, this.init, this.time, ans);
+            if (gameOver) {
+                // display game is over
+                return true;
+            }
             System.out.println("You ran away from the monster with an acceleration of "
                     + ans + "m/s squared!  The monster is soon lost in the folds of darkness.");
             return true;
