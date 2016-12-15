@@ -9,6 +9,7 @@ import CITstrangerthings.exceptions.PlayerControlException;
 import CITstrangerthings.model.Character;
 import CITstrangerthings.model.Game;
 import java.util.ArrayList;
+import strangerthings.StrangerThings;
 
 /**
  *
@@ -32,12 +33,8 @@ public class PlayerControl {
         ans =(int)(ans*100) / 100;
         acc =(int)(acc*100) / 100;
         if (acc != ans){
+            StrangerThings.getCurrentGame().getCharacters().remove(0);
             throw new PlayerControlException("Your answer was wrong, flee again or the monster will get you.");
-            /*
-            ArrayList<Character> characters= GameControl.createCharacters();
-            Game.getCharacters()
-            game.getCharacters(characters);
-            */
         }
     }
 
