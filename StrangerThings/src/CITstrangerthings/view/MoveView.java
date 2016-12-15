@@ -35,25 +35,21 @@ public class MoveView extends View {
     public boolean doAction(String moveOption) {
         try {
             moveOption = moveOption.toUpperCase();
-            
             this.move(moveOption);
-            
-        
-            
-        } catch (MapControlException ex) {
-            System.out.println(ex.getMessage());
-            
-            
+            return true;
         }
-        return false;
+        catch (MapControlException ex) {
+            System.out.println(ex.getMessage());
+            return false;
+        }
     }
 
     private void move(String direction) throws MapControlException {
         ArrayList<Character> characters = StrangerThings.getCurrentGame().getCharacters();
-        Location [][] locations = StrangerThings.getCurrentGame().getMap().getLocations();
+        Location[][] locations = StrangerThings.getCurrentGame().getMap().getLocations();
+        direction = this.getInput().toUpperCase();
         
-        
-        Location newPlace = MoveControl.move(characters, locations, "N");
+        Location newPlace = MoveControl.move(characters, locations, direction);
         System.out.println(newPlace.getScene().getDescription());
     }
 

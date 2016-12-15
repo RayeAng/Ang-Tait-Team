@@ -58,10 +58,10 @@ public class MoveControl {
         } else {
             System.out.println("Where did you want to go??");
         }
-        for (Character character : characters) {
-            oldLocation.getCharacters().remove(character);
-            newLocation.getCharacters().add(character);
-            character.setCoordinates(new Point(newLocation.getRow(), newLocation.getColumn()));
+        for (Character partyMember : characters) {
+            newLocation.getCharacters().add(partyMember);
+            oldLocation.getCharacters().remove(partyMember);
+            partyMember.setCoordinates(new Point(newLocation.getRow(), newLocation.getColumn()));
         }
         return newLocation;
     }

@@ -8,6 +8,7 @@ package CITstrangerthings.control;
 import CITstrangerthings.exceptions.MapControlException;
 import CITstrangerthings.model.Location;
 import CITstrangerthings.model.Character;
+import java.util.ArrayList;
 import strangerthings.StrangerThings;
 
 /**
@@ -46,6 +47,8 @@ public class MapControl {
         if (locations == null) {
             throw new MapControlException("We cannot pinpoint your party.");
         }
+        
+     
         return "";
     }
     
