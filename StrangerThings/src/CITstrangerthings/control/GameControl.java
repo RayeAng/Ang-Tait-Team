@@ -119,10 +119,10 @@ public class GameControl {
         characters.add(new Character("Mike", "The main character", "Knows D&D really good"));
         characters.add(new Character("Dustin", "Kid has a lisp.  It's hilarious!", "Charisma and Hope!"));
         characters.add(new Character("Eleven", "Mysterious girl with shaved head.  Kinda cute.", "Telepathy and nosebleeds?!"));
-        
+
         return characters;
-        
     }
+    
     private static Map createMap(){
         Map map = new Map(6, 5);
         Scene[] scenes = createScenes();

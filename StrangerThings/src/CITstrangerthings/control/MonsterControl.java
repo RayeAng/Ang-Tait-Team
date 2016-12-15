@@ -5,10 +5,18 @@
  */
 package CITstrangerthings.control;
 
+import CITstrangerthings.exceptions.PlayerControlException;
+
 /**
  *
  * @author tibbit13
  */
 public class MonsterControl {
-    
+    public static double monsterAttack (int attackPower) throws PlayerControlException{
+        if (attackPower < 1 || attackPower > 75) {
+            throw new PlayerControlException("Monster's attack is invalid");
+         }
+        double totalForce = attackPower /60;
+        return totalForce;
+    }
 }

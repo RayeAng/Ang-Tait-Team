@@ -15,7 +15,6 @@ import java.util.Scanner;
  * @author tibbit13
  */
 public class PlayerFleeView extends View {
-    
     Random rand1 = new Random();
     int init;
     Random rand2 = new Random();
@@ -30,19 +29,16 @@ public class PlayerFleeView extends View {
         
         time = rand3.nextInt(5) + 1;
         
-        
         this.displayMessage= "\n"
                 + "\n^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
                 + "\n You have found a monster, and have chosen to make like dodge. \n You flee "
                 + "at an initial velocity of" + init + "m/s and a final velocity of "+ finV + "m/s \n in " +time+ " seconds. "
                 + "Type in the correct acceleration to escape.  The monster \n hates kids who "
                 + "can't math good.";
-
     }
 
     @Override
     public boolean doAction(String playerFlee) {
-        
         try {
             double ans = Double.parseDouble(playerFlee);
             PlayerControl.playerFlee(this.finV, this.init, this.time, ans);
@@ -50,16 +46,10 @@ public class PlayerFleeView extends View {
                     + ans + "m/s squared!  The monster is soon lost in the folds of darkness.");
             return true;
         }
-       
-
         catch (PlayerControlException pf){
             System.out.println(pf.getMessage());
             return false;
         }
-
     }
-
-
-
 }
 
