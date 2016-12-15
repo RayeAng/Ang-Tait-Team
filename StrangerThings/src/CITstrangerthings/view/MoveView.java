@@ -32,26 +32,23 @@ public class MoveView extends View {
     }
     
     @Override
-    public boolean doAction(String moveOption) {
+    public boolean doAction(String direction) {
         try {
-            moveOption = moveOption.toUpperCase();
-            this.move(moveOption);
-            return true;
+             ArrayList<Character> characters = StrangerThings.getCurrentGame().getCharacters();
+            Location[][] locations = StrangerThings.getCurrentGame().getMap().getLocations();
+            direction = direction.toUpperCase();
+            Location newPlace = MoveControl.move(characters, locations, direction);
+            System.out.println(newPlace.getScene().getDescription());
+            
         }
         catch (MapControlException ex) {
             System.out.println(ex.getMessage());
-            return false;
+            
         }
+        return false;
     }
 
-    private void move(String direction) throws MapControlException {
-        ArrayList<Character> characters = StrangerThings.getCurrentGame().getCharacters();
-        Location[][] locations = StrangerThings.getCurrentGame().getMap().getLocations();
-        direction = this.getInput().toUpperCase();
-        
-        Location newPlace = MoveControl.move(characters, locations, direction);
-        System.out.println(newPlace.getScene().getDescription());
-    }
+
 
  
 }

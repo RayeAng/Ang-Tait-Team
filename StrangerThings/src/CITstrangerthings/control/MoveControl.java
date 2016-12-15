@@ -23,7 +23,15 @@ public class MoveControl {
         Location newLocation = null;
         Character characterOne = characters.get(0);
 
-        if (direction == "S") {
+        if (characters == null) {
+            throw new MapControlException("You don't have a character to move!");
+        }
+        if (locations == null) {
+            throw new MapControlException("We cannot pinpoint your party.");
+        }
+        
+        
+        if (direction.equals("S")) {
             if (characterOne.getCoordinates().x == 5) {
                 throw new MapControlException("You cannot move anymore south");
             }
@@ -31,7 +39,7 @@ public class MoveControl {
             oldLocation = locations[characterOne.getCoordinates().x][characterOne.getCoordinates().y];
             newLocation = locations[characterOne.getCoordinates().x + 1][characterOne.getCoordinates().y];
             }
-        } else if (direction == "N") {
+        } else if (direction.equals("N")) {
             if (characterOne.getCoordinates().x == 0) {
                 throw new MapControlException("You cannot move anymore north");
             }
@@ -39,7 +47,7 @@ public class MoveControl {
             oldLocation = locations[characterOne.getCoordinates().x][characterOne.getCoordinates().y];
             newLocation = locations[characterOne.getCoordinates().x - 1][characterOne.getCoordinates().y];
             }
-        } else if (direction == "E") {
+        } else if (direction.equals("E")) {
             if (characterOne.getCoordinates().y == 4) {
                 throw new MapControlException("You cannot move anymore east");
             }
@@ -47,7 +55,7 @@ public class MoveControl {
             oldLocation = locations[characterOne.getCoordinates().x][characterOne.getCoordinates().y];
             newLocation = locations[characterOne.getCoordinates().x][characterOne.getCoordinates().y + 1];
             }
-        } else if (direction == "W") {
+        } else if (direction.equals("W")) {
             if (characterOne.getCoordinates().y == 0) {
                 throw new MapControlException("You cannot move anymore west");
             }
@@ -56,7 +64,7 @@ public class MoveControl {
             newLocation = locations[characterOne.getCoordinates().x][characterOne.getCoordinates().y - 1];
             }
         } else {
-            System.out.println("Where did you want to go??");
+            throw new MapControlException("Invalid Direction");
         }
         for (Character partyMember : characters) {
             newLocation.getCharacters().add(partyMember);

@@ -156,7 +156,7 @@ public class GameControl {
         "The spooky forest.  You and your friends call it Mirkwood, from The Hobbit.  There are weird shadows"
                 + "\nflying all around you.  The trees creek and rattle in the chill wind.  Even on a calm"
                 + "day, there are unnatural noises all around....BOO!");
-        forestScene.setMapSign(" ♣♣ ");
+        forestScene.setMapSign("♣♣");
         forestScene.setRestricted(false);
         scenes[SceneEnum.forest.ordinal()] = forestScene;
         
@@ -166,7 +166,7 @@ public class GameControl {
                 + "\nreflects your love for your missing friend.  Your party's hearts feel warm.  The building looms up"
                 + "\nbefore you, and you are eager break in and look for pudding and other supplies, and then to high-tail"
                 + "it out of there.");
-        schoolScene.setMapSign(" SC ");
+        schoolScene.setMapSign("SC");
         schoolScene.setRestricted(false);
         scenes[SceneEnum.school.ordinal()] = schoolScene;
         
@@ -176,7 +176,7 @@ public class GameControl {
                 + "\n it's haunted, and that the floors are littered with deadly traps.  Your party wonders if"
                 + "\nthere are supplies here to upgrade your weapon.  You wouldn't be surprised if this is where"
                 + "\nthe portal is either.  Consider exploration here as a recon mission. ");
-        weirdNeighborScene.setMapSign(" ◘ ");
+        weirdNeighborScene.setMapSign("◘");
         weirdNeighborScene.setRestricted(false);
         scenes[SceneEnum.weirdNeighbor.ordinal()] = weirdNeighborScene;
         
@@ -185,7 +185,7 @@ public class GameControl {
         "Within the school, you find Mr. Lewdinski's office.  A trusted teacher, you break into his office"
                 + "\nlooking for equipment.  He is the one who told you about the Upside-Down, after all."
                 + "You break in and find a safe with a note placed on it.");
-        teacherOfficeScene.setMapSign(" SC ");
+        teacherOfficeScene.setMapSign("T");
         teacherOfficeScene.setRestricted(false);
         scenes[SceneEnum.teacherOffice.ordinal()] = teacherOfficeScene;
         
@@ -195,7 +195,7 @@ public class GameControl {
                 + "\nit is well-guarded, with security guards and cameras"
                 + "\nwatching even the pavement outside the building."
                 + "\nThere's no way to sneak into the building.");
-        governmentBuildingScene.setMapSign(" $ ");
+        governmentBuildingScene.setMapSign("$");
         governmentBuildingScene.setRestricted(true);
         scenes[SceneEnum.governmentBuilding.ordinal()] = governmentBuildingScene;
         
@@ -205,7 +205,7 @@ public class GameControl {
                 + "\nHe yells at your party saying that kids should"
                 + "\nnot be playing with dangerous objects! He takes"
                 + "\naway all of your items.");
-        sherrifOfficeScene.setMapSign(" SO ");
+        sherrifOfficeScene.setMapSign("SO");
         sherrifOfficeScene.setRestricted(true);
         scenes[SceneEnum.sherrifOffice.ordinal()] = sherrifOfficeScene;        
                
@@ -217,7 +217,7 @@ public class GameControl {
                 + "\nside. The final monster is resting in there. This is your"
                 + "\nchance to take it out and save the town! Are you ready to fight"
                 + "\nit? You cannot run away from the monster unscratched.");
-        portalScene.setMapSign(" ○ ");
+        portalScene.setMapSign("○");
         portalScene.setRestricted(false);
         scenes[SceneEnum.upsideDown.ordinal()] = portalScene;        
         
@@ -227,7 +227,7 @@ public class GameControl {
                 + "\nMany people have fallen to their deaths here.  BE CAREFUL!"
                 + "\nWarning signs line the edge of the gully, but you feel there "
                 + "\nmight be clues there.");
-        cliffSideScene.setMapSign(" ▲‼ ");
+        cliffSideScene.setMapSign("▲‼");
         cliffSideScene.setRestricted(false);
         scenes[SceneEnum.cliffSide.ordinal()] = cliffSideScene; 
         
@@ -235,7 +235,7 @@ public class GameControl {
         candyScene.setDescription(
         "It's a candy shop! Best candy in town, but you're banned from it because the shopkeeper caught you "
                 + "\nstealing a few years ago.");
-        candyScene.setMapSign(" M&M ");
+        candyScene.setMapSign("M&M");
         candyScene.setRestricted(false);
         scenes[SceneEnum.candy.ordinal()] = candyScene; 
         
@@ -243,7 +243,7 @@ public class GameControl {
         graveyardScene.setDescription(
         "No child in town likes the graveyard.  There are always spooking sightings of 'ghosts' and 'ghouls'!  "
                 + "\nIt seems even scarier and darker since Will disappeared.");
-        graveyardScene.setMapSign(" ∩∩∩ ");
+        graveyardScene.setMapSign("∩∩∩");
         graveyardScene.setRestricted(false);
         scenes[SceneEnum.graveyard.ordinal()] = graveyardScene;
         
@@ -251,21 +251,21 @@ public class GameControl {
         parkScene.setDescription(
         "The park of the school.  It is for little kids.  You wouldn't be caught dead playing here...."
                 + "\nunder normal circumstances....");
-        parkScene.setMapSign(" PK ");
+        parkScene.setMapSign("PK");
         parkScene.setRestricted(false);
         scenes[SceneEnum.park.ordinal()] = parkScene;
         
         Scene threeWayScene = new Scene();
         threeWayScene.setDescription(
         "Actually a 4-way, but the town is under quarantine from the sherrif while Will is missing.");
-        threeWayScene.setMapSign(" *** ");
+        threeWayScene.setMapSign("*");
         threeWayScene.setRestricted(false);
         scenes[SceneEnum.threeWay.ordinal()] = threeWayScene;
         
         Scene constructionScene = new Scene();
         constructionScene.setDescription(
         "Construction Zone, no Trespassing. None. At all.  ");
-        constructionScene.setMapSign(" ║no║ ");
+        constructionScene.setMapSign("║║");
         constructionScene.setRestricted(true);
         scenes[SceneEnum.construction.ordinal()] = constructionScene;
         
@@ -273,7 +273,7 @@ public class GameControl {
         playgroundScene.setDescription(
         "Your backyard!  It has a fort and everything!  People think this is our secret place, but"
                 + "\nthat's just a cover.  It's where cool kids go to play. ");
-        playgroundScene.setMapSign(" FT ");
+        playgroundScene.setMapSign("FT");
         playgroundScene.setRestricted(false);
         scenes[SceneEnum.playground.ordinal()] = playgroundScene;
         
@@ -281,7 +281,7 @@ public class GameControl {
         willsHouseScene.setDescription(
         "This is where Will lives.  His mom has been very sad ever since he disappeared.  Maybe "
                 + "\nyou can search for some clues here. ");
-        willsHouseScene.setMapSign(" WH ");
+        willsHouseScene.setMapSign("WH");
         willsHouseScene.setRestricted(false);
         scenes[SceneEnum.willsHouse.ordinal()] = willsHouseScene;
         
