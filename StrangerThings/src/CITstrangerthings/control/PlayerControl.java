@@ -18,7 +18,7 @@ import strangerthings.StrangerThings;
  */
 public class PlayerControl {
 
-    public static FleeResults playerFlee(double fVel, double initVel, double time, double ans) throws PlayerControlException {
+    public static boolean playerFlee(double fVel, double initVel, double time, double ans) throws PlayerControlException {
         if (fVel < 1.0 || initVel < 1.0 || time < 1.0) {
             throw new PlayerControlException("You can't run that slow, flee again!");
         }
