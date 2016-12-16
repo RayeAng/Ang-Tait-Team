@@ -16,8 +16,11 @@ import CITstrangerthings.model.Character;
 import CITstrangerthings.model.Location;
 import CITstrangerthings.model.Scene;
 import CITstrangerthings.model.SceneEnum;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 /**
@@ -63,6 +66,20 @@ public class GameControl {
             if (out != null) {
                 out.close();
             }
+        }
+    }
+    
+     public static void loadGame(String loadLocation)throws IOException, ClassNotFoundException {
+        ObjectInputStream in = null;
+        try {
+             in = new ObjectInputStream(new FileInputStream(loadLocation)); 
+               Game loadedGame = (Game) in.readObject();
+               StrangerThings.setCurrentGame(loadedGame);
+        }
+        finally {
+            
+                in.close();
+            
         }
     }
 
@@ -363,4 +380,6 @@ public class GameControl {
         items[i] = items[k];
         items[k] = temp;
     }
+
+   
 }
