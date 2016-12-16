@@ -27,6 +27,8 @@ public class LoadView extends View{
         try {
             GameControl.loadGame(value);
             System.out.println("\nYour game has been loaded!");
+            GameMenuView gamemenuview = new GameMenuView();
+            gamemenuview.display();
             return true;
         }
         catch (IOException sv){
