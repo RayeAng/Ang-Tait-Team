@@ -66,7 +66,8 @@ public class MainMenuView extends View{
     }
 
     private void loadExistingGame() {
-        System.out.println("*** load game successful ***");
+       LoadView loadingGame = new LoadView();
+       loadingGame.display();
     }
 
     private void quitGame() {
