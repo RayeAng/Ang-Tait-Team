@@ -7,8 +7,8 @@ package CITstrangerthings.view;
 
 import CITstrangerthings.control.PlayerControl;
 import CITstrangerthings.exceptions.PlayerControlException;
+import CITstrangerthings.model.FleeResults;
 import java.util.Random;
-import java.util.Scanner;
 
 /**
  *
@@ -21,7 +21,7 @@ public class PlayerFleeView extends View {
     int finV;
     Random rand3 = new Random();
     int time;
-
+    
     public PlayerFleeView() {
         super();
         finV = rand2.nextInt(15) + 1;
@@ -41,13 +41,12 @@ public class PlayerFleeView extends View {
     public boolean doAction(String playerFlee) {
         try {
             double ans = Double.parseDouble(playerFlee);
-            boolean gameOver =  PlayerControl.playerFlee(this.finV, this.init, this.time, ans);
-            if (gameOver) {
-                // display game is over
-                return true;
+            FleeResults result = PlayerControl.playerFlee(this.finV, this.init, this.time, ans);
+            System.out.println(result.getMessage());
+            if (result.getReason() == -2 ) {
+                PlayerLostView playerlostview = new PlayerLostView();
+                playerlostview.display();
             }
-            System.out.println("You ran away from the monster with an acceleration of "
-                    + ans + "m/s squared!  The monster is soon lost in the folds of darkness.");
             return true;
         }
         catch (PlayerControlException pf){
