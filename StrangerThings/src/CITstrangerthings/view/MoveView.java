@@ -40,6 +40,10 @@ public class MoveView extends View {
             Location newPlace = MoveControl.move(characters, locations, direction);
             System.out.println(newPlace.getScene().getDescription());
             
+            if (newPlace.getScene().getSceneName().equals("teacheroffice")) {
+                CountMarbleView marbles = new CountMarbleView();
+                marbles.display();
+            }
         }
         catch (MapControlException ex) {
             System.out.println(ex.getMessage());
