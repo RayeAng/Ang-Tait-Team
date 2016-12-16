@@ -72,7 +72,6 @@ public class GameMenuView extends View{
             default:
                 System.out.println("\n*** Invalid Selection, try again. ***");
                 break;
-
         }
         return false;
     }
@@ -80,7 +79,6 @@ public class GameMenuView extends View{
     private void showMove() {
         MoveView moveView = new MoveView();
         moveView.display();
-
     }
 
     private void showInventory() {
