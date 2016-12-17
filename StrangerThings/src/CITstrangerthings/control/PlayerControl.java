@@ -60,7 +60,7 @@ public class PlayerControl {
 
     public static double playerAttack(int userSwing, int weaponStrength) throws PlayerControlException {
         if (userSwing < 1 || userSwing > 75) {
-            throw new PlayerControlException("Cannot swing weapon that slow.");
+            throw new PlayerControlException("You cannot swing weapon that slow or that fast.");
         }
         if (weaponStrength < 1) {
             throw new PlayerControlException("Invalid weapon strength.");
